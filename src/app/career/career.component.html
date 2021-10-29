@@ -1,0 +1,61 @@
+<app-sidemenu></app-sidemenu>
+<div class="container-fluid" id="joblist">
+    <div class="container-fluid banner">
+        <div class="banner-text">
+            <h1 style="color: white;">Career Details</h1>
+        </div>
+    </div>
+    <div class="container mt-5" id="joblist">
+        <div class="row">
+            <div class="col-sm-12" style="padding-bottom: 2%;">
+                <h1 class="display-3 text-center" id="jobname">Our Job Listings</h1>
+            </div>
+            <div class="col-sm-12">
+                <div class="col-sm-4">
+                    <div class="input-group">
+                       
+                            <input id="search-input" type="search" id="form1" class="form-control"
+                                placeholder="Search By Job Name       " />
+                        
+                        <button id="search-button" type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="dropdown">
+                        <select style="font-size: 18px;width: 100%;" *ngFor="let item of jobdata; let i = index;">
+                            <option>{{item.JOB_TITLE}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="input-group">
+                           
+                            <div class="input-group-append">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" 
+                                ngbDatepicker #d="ngbDatepicker">
+                                <button class="btn btn-primary calendar" (click)="d.toggle()"
+                                    type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style="padding-top: 3%;">
+            <div class="col-sm-4" *ngFor="let job of jobs" id="carditem">
+                <a href="jobapply/{{job.url}}">
+                    <div class="card" [ngClass]="job.priority" id="card">
+                        <h1 class="font-weight-bold">{{job.jobname}}</h1>
+                        <p>{{job.commonname}}</p>
+                        <p>{{job.place}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+<app-menu></app-menu>

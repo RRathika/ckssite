@@ -1,0 +1,60 @@
+<app-sidemenu></app-sidemenu>
+<div class="banner">
+  <div class="banner-text">
+    <h1 style="color: white;">About us</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="mt-5">Who we are</h1>
+      <p class="mt-4 mb-5">Starting from Web services to Digital Marketing, desktop application development to mobile
+        application
+        development, Knowledge management to business process management. We deliver high quality output respecting
+        deadlines. We have experiance across a variety of industries including technlogy, healthcare, windmill, timber,
+        retail, Customer products and professional services. We provide manpower, consulting and training service to
+        lead organizations leaders.</p>
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-sm-6">
+        <h1>Our Vision</h1>
+        <p>To provide a profitable & Reliable service that is accessible to all customers as well as to be a base and a
+          standard for the whole digital World.</p>
+      </div>
+      <div class="col-sm-6">
+        <h1>Our Mision</h1>
+        <p>To provide a profitable & Reliable service that is accessible to all customers as well as to be a base and a
+          standard for the whole digital World.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <mat-carousel
+  timings="200ms ease-in"
+  [autoplay]="true"
+  [interval]=2000
+>
+  <mat-carousel-slide
+    *ngFor="let slide of slides; let i = index;"
+    [image]="slide.image"
+    overlayColor="#ffffff"
+    [hideOverlay]="true"
+  ></mat-carousel-slide>
+</mat-carousel> -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+    <h1 class="mt-5 text-center">Our Clients</h1>
+    <div class="my-5" style="text-align:center">
+      <ng-image-slider #nav [images]="data" [infinite]="true" [autoSlide]="5" [imageSize]="{width: '25%', height: 200}"
+        slideImage="1"></ng-image-slider>
+    </div>
+  </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<app-menu></app-menu>

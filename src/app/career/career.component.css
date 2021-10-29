@@ -1,0 +1,64 @@
+.banner h1 {
+    margin: 50px;
+    font-size: 50px;
+}
+.banner {
+    color: dark;
+    background: url('../../assets/images/About-us.jpg')top left/cover no-repeat;
+    height: 200px;
+    display: flex;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    color: #000;
+    border-radius: 15px;
+    text-align: center;
+}
+#card:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+p{
+    font-family: Raleway !important;
+    font-size: 18px;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+}
+#link{
+  color: #000;
+}
+#jobname{
+    color: #000;
+}
+.Medium , .Low , .High {
+  margin: 1rem;
+  border:1px solid currentColor;  
+}
+.Medium{
+ background-color:  #efe052;
+ border-color: #efe052;
+}
+.Low {
+  background-color: #79a85a;
+  border-color: #79a85a;
+}
+.High{
+  background-color: #7eb49e;
+  border-color: #7eb49e;
+}
+input{
+  font-size: 18px;
+   height: 30px;
+}
+i{
+  font-size: 17px;
+}

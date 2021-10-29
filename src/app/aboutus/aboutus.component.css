@@ -1,0 +1,167 @@
+a.closebtn {
+  display: none;
+}
+p{
+  font-size: 20px;
+  text-align:justify;
+}
+h1{
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+@media only screen and (max-width:600px) {
+  div#myNav {
+      display: block;
+   }   
+   a.icon{
+     display: block;
+     width: 25px;
+  margin-left: 10px;
+  }
+  
+ .about1, .about2, .about3{
+   height: 250px !important;
+ }
+}
+@media only screen and (min-width:601px) and (max-width:2885px){
+ 
+     .about1, .about2, .about3{
+      height: 890px !important;
+    }
+    .navbar {
+      overflow: hidden;
+        position: fixed !important;
+        bottom: 0px !important;
+        height: 0px;
+        margin: 0 25% 0 25%;
+        padding: 0px 15% 0 15%;
+        border-radius: 15px 15px 0 0;
+        background-color: #000;
+     }
+}
+
+.banner h1 {
+  margin: 50px;
+  font-size: 50px;
+}
+.banner {
+  color: dark;
+  background: url('../../assets/images/About-us.jpg')center center no-repeat;
+  height: 200px;
+  display: flex;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.about1{
+  background: url('../../assets/images/about1.jpg')top left/cover  no-repeat;
+  height:1000px;
+  display: flex;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+.about2{
+  background: url('../../assets/images/about2.jpg')top left/cover  no-repeat;
+  height:1000px;
+  display: flex;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+.about3{
+  background: url('../../assets/images/about3.jpg')top left/cover no-repeat;
+  height:1000px;
+  display: flex;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Slider */
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.logo-carousel {
+  overflow: inherit;
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-track::before,
+.slick-track::after {
+  display: table;
+  content: '';
+}
+
+.slick-track::after {
+  clear: both;
+}
+
+.slick-track {
+  padding: 1rem 0;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  background: url(https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/arrow.svg?sanitize=true) center no-repeat;
+  color: #fff;
+  filter: invert(77%) sepia(32%) saturate(1%) hue-rotate(344deg) brightness(105%) contrast(103%);
+  border: none;
+  width: 2rem;
+  height: 1.5rem;
+  text-indent: -10000px;
+  margin-top: -16px;
+  z-index: 99;
+}
+
+.slick-arrow.slick-next {
+  right: -40px;
+  transform: rotate(180deg);
+}
+
+.slick-arrow.slick-prev {
+  left: -40px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.row {
+  overflow: hidden;
+}  
+
+/* JsFiddle Example only/don't use */
+.logo-carousel {
+  margin-top: 32px;
+}
+.slick-slider {  
+  width: 90%;  
+  margin: auto;  
+} 

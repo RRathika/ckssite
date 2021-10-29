@@ -1,0 +1,28 @@
+.container {
+    display: flex;    
+    height: 100vh;  
+    background-image:url(../../assets/images/adminlogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .container .col {
+    flex: 1;
+    height: 100%;
+  }
+  
+  .container .col:nth-child(2)
+  {
+    background-color: white ;
+    margin-right: -6px;
+  }
+  form{
+    font-size: 15px;      
+    margin: 0px 75px;
+    /* display: inline-block; */
+  }
+  input{
+      width: 100%;
+      font-size: 15px;
+  }

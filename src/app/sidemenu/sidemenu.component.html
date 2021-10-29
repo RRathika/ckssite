@@ -1,0 +1,43 @@
+<nav class="main-menu" id="icon_wrapper">
+    <div class="logo">
+      <a href="" class="simple-text">
+          </a>
+    </div>
+    <ul>
+      <li class="has-subnav">
+        <a (click)="itservice()">
+                  <i class="fa fa-home fa-2x"></i>
+                  <span class="nav-text">
+                      IT Service
+                  </span>
+              </a>
+  
+      </li>
+      <li class="has-subnav">
+        <a href="https://careerin.co.in/"  target="_blank" >
+                  <i class="fa fa-laptop fa-2x"></i>
+                  <span class="nav-text">
+                      Career
+                  </span>
+              </a>
+      </li>
+      <li class="has-subnav">
+        <a (click)="consult()">
+                 <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                  <span class="nav-text">
+                    Consulting
+                  </span>
+              </a>
+      </li>
+  
+      <li class="profileSideBar has-subnav dropdown">
+        <a routerLink="/devapps">
+            <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+                  <span class="nav-text">
+                    Devops 
+                  </span>
+              </a>       
+      </li>
+    </ul>
+    <div class="menu-bg" [ngStyle]="{'background-color':backgroundtop}"></div>
+  </nav>

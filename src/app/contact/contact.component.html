@@ -1,0 +1,53 @@
+<app-sidemenu></app-sidemenu>
+<div class="banner">
+    <div class="banner-text">
+        <h1 style="color: white;">Contact Details</h1>
+    </div>
+</div>
+<h1 class="contactus"> Contact Us</h1>
+<div class="container">
+    <div class="col-lg-12">
+        <div class="col-lg-6">
+            <div class="container">
+                <form  [formGroup]="contactForm" class="form-horizontal" (ngSubmit)="onSubmit()">
+                    <label for="fname">First Name(Rquired)</label>
+                    <input type="text" formControlName="ContactName" id="fname" name="firstname">
+                    <label for="email">Email address(Required)</label>
+                    <input type="email" formControlName="Email" class="form-control" id="email">
+
+                    <label for="subject">Subject</label>
+                    <input type="text" formControlName="Subject" id="subject" name="subject">
+                    <label for="your message">Your message</label>
+                    <textarea id="your message" formControlName="Message" name="your message" style="height:200px"></textarea>
+
+                    <input type="submit" value="SEND">
+                </form>
+            </div>
+
+
+        </div>
+        <div class="col-lg-6">
+
+                <div class="col-lg-12">
+                    <div class="col-lg-6">
+                    <div class="row-lg-12">
+                    <i class="fa fa-address-card fa-2x mt-6 mr-3 x"></i>
+                    
+                    <div class="maptext" style="margin-left:2px;"> 379A, 4th Floor, K.P Road,<br> Nagercoil-629001,<br>    KanyaKumari District, <br>Tamilnadu, India.</div></div></div>
+                    
+                    <div class="col-lg-6">
+                    <div class="row-lg-12">
+                    <div class="row-lg-6">
+                    <i class="fa fa-phone fa-2x mt-4  z"></i>
+                    <div class="phntext">&nbsp;&nbsp;&nbsp; +91 9498029898</div></div>
+                    <div class="row-lg-6">
+                    <i class="fa fa-envelope fa-2x mt-4  z"></i>
+                    <div class="envelopetext">&nbsp;Contact@ckssolutions.co.in</div></div>
+                    </div>
+                       </div>
+                           </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+<app-menu></app-menu>

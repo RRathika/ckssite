@@ -1,0 +1,78 @@
+<div class="col-sm-1"></div>
+<div class="col-sm-11 mt-5">
+    <div class="card card-primary mt-5" style="width:90%;">
+        <div class="card-header  bg-primary">
+            <h3 class="card-title">Add Job Name</h3>
+        </div>
+        <form [formGroup]="jobpostForm" (ngSubmit)="submit()">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputJobTittle">Job Title</label>
+                    <select class="form-select" aria-label="Default select example" formControlName="Job_Id">
+                        <option *ngFor="let item of jobdata" [value]="item.JOB_ID">{{ item.JOB_TITLE }}</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="exampleInputJobTittle">Start Date</label>
+                        
+                            <div class="input-group">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" 
+                                    ngbDatepicker #d="ngbDatepicker" formControlName="Job_StartDate" data-date-format='YYYY-MM-DD'>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" (click)="d.toggle()"
+                                        type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                                </div>
+                            </div>                       
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputJobTittle">Location</label>
+                        <input type="text" class="form-control" id="exampleInputJobTittle"
+                            formControlName="Job_Location" placeholder="Location">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputJobTittle">Experiance</label>
+                        <input type="text" class="form-control" id="exampleInputJobTittle"
+                            formControlName="Job_Experience" placeholder="Experiance">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <!-- <div class="col-sm-12"> -->
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                                #e="ngbDatepicker" formControlName="Job_EndDate" data-date-format='YYYY-MM-DD'>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary" (click)="e.toggle()"
+                                    type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputJobTittle">Job Type</label>
+                        <select class="form-select" aria-label="Default select example" formControlName="Job_Type">
+                            <option selected>Open this select menu</option>
+                            <option value="Freelance">Freelance</option>
+                            <option value="Full Time">Full Time</option>
+                            <option value="Part Time">Part Time</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputJobTittle">Salary</label>
+                        <input type="text" class="form-control" id="exampleInputJobTittle" formControlName="Job_Salary"
+                            placeholder="Salary">
+                    </div>
+                </div>
+                <div class="">
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                </div>
+            </div>
+
+            <!-- <div class="card-footer">
+                <button type="submit" class="btn btn-primary mt-5">Submit</button>
+            </div> -->
+        </form>
+    </div>
+</div>

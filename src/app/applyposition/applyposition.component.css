@@ -1,0 +1,53 @@
+
+form { 
+    margin: 0 auto; 
+    }
+    .header{
+    
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 25px;
+    }
+    .banner {
+        color: dark;
+        background: url('../../assets/images/About-us.jpg')top left/cover no-repeat;
+        display: flex;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+    
+.banner h1 {
+    margin: 50px;
+    font-size: 50px;
+}
+label{
+    font-size:15px;
+}
+a.closebtn {
+    display: none;
+ }
+ @media only screen and (max-width:600px) {
+    div#myNav {
+        display: block;
+     }   
+     a.icon{
+       display: block;
+       width: 25px;
+    margin-left: 10px;
+    }
+}
+p{
+    font-family: Raleway !important;
+    font-size: 18px;
+}
+#joblist{
+    background-color: #f1f1f1;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    margin: 16px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 15px;
+}

@@ -1,0 +1,34 @@
+<div class="col-sm-12 mt-5 text-center">
+    <h1>Job Post Details</h1>
+<table class="table table-striped w-100 fs-3 mt-5">
+    <thead>
+      <tr>
+        <th>SI.NO</th>
+        <th>Job Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Location</th>
+        <th>Job Type</th>
+        <th>Experiance</th>
+        <th>Salary</th>
+        <th>.....</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info" *ngFor="let item of jobdata; let i = index;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.Job_Id}}</td>
+        <td>{{item.Job_StartDate}}</td>
+        <td>{{item.Job_EndDate}}</td>
+        <td>{{item.Job_Location}}</td>
+        <td>{{item.Job_Type}}</td>
+        <td>{{item.Job_Experience}}</td>
+        <td>{{item.Job_Salary}}</td>
+        <td>
+          <button (click)="oneditjobpost(item)"><i class="fas fa-edit"></i></button>
+          <button (click)="ondeletejobpost(item.Id,item)"><i class="fas fa-trash-alt"></i></button>
+        </td>      
+      </tr>
+    </tbody>
+  </table>
+</div>

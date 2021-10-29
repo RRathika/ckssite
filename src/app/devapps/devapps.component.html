@@ -1,0 +1,86 @@
+<app-sidemenu></app-sidemenu>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6" style="background:#ced1d2;">
+            <img src="../../assets/images/devopshover.png" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-sm-6" style="background:#a85a96;">
+            <div class="leaddiv">
+                <p class="lead">DevOps 360 is the first Salesforce Delivery Management application.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="padding-bottom:5%;padding-top: 5%;">
+    <div class="row">
+        <div class="col-sm-4 justify-content-center">
+            <div class="small-4 medium-4 large-4 columns text-center">
+                <i class="fa fa-connectdevelop fa-lg" aria-hidden="true" style="color: #a85a96;
+                font-size: 72px;padding: 2px;"></i>
+            </div>
+            <h2 style="text-align: center; font-size:25px;padding-top: 17px;">Connected Devices Testing</h2>
+            <p style="text-align: justify; font-size:15px;">The world of connected devices testing is expanding rapidly.
+                This micro-credential includes the testing of mobile phones, smartphones, tablets, mobile apps, and the
+                Internet of Things (IoT). If your company works with devices that connect to a network and the Internet,
+                you are your team needs the specialized knowledge of Connected Devices Testing.</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="small-4 medium-4 large-4 columns text-center">
+                <i class="fa fa-shield fa-lg" aria-hidden="true" style="color: #a85a96;
+                font-size: 72px;padding: 2px;"></i>
+            </div>
+            <h2 style="text-align: center; font-size:25px;padding-top: 17px;">CyberSecurity Testing</h2>
+            <p style="text-align: justify; font-size:15px;">Every testing team needs to understand acceptance testing
+                and this micro-credential helps do that. The goal of acceptance testing is for the targeted user or
+                operator to “accept” the software as working to meet their requirements for the software. Prove your
+                knowledge of how different types of users can conduct acceptance testing in different environments.</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="small-4 medium-4 large-4 columns text-center">
+                <i class="fa fa-user fa-lg" aria-hidden="true" style="color: #a85a96;
+                font-size: 72px;padding: 2px;"></i>
+            </div>
+            <h2 style="text-align: center; font-size:25px;padding-top: 17px;">DevOps Testing</h2>
+            <p style="text-align: justify; font-size:15px;">DevOps bridges the gap between development and operations by
+                bringing the two teams together for the entire software lifecycle, from development to delivery. DevOps
+                Testing (also called DevTestOps and QAOps) is a critical, ongoing part of DevOps and the focus of this
+                micro-credential.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="../../assets/images/idea2.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-sm-6">
+            <form class="text-center border border-light p-5 shadow mb-5 bg-white rounded">
+                <p class="h1 mb-4">Share Your Idea</p>
+                <input type="text" class="form-control mb-4" placeholder="Name">
+                <input type="email" class="form-control mb-4" placeholder="E-mail">
+                <textarea class="form-control" style="height:150px"></textarea>
+                <button class="btn btn-block my-4"
+                    style="font-size: 20px;color: #fff;background-color: #a85a96;border-color: #a85a96;"
+                    type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- <h1 class="text-center">Our upcoming projects</h1> -->
+<div class="container"  style="padding-top: 5%;padding-bottom: 5%;">     
+    <div class="row" *ngFor="let img of img_list; let i = index">        
+            <div class="col-sm-12" *ngIf="current == i" @scale>
+                <div class="col-sm-6 col-md-6">
+                    <img class="img-fluid" [src]="img.image">
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <h1 class="mt-5 text-center">{{img.title}}</h1>
+                    <p class="mt-5">{{img.description}}</p>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<app-footer></app-footer>
+<app-menu></app-menu>

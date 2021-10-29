@@ -1,0 +1,190 @@
+.navbar {
+    overflow: hidden;
+      position: fixed;
+      bottom: 0px !important;
+      height: 0px;
+      margin: 0 25% 0 25%;
+      padding: 0px 15% 0 15%;
+      border-radius: 15px 15px 0 0;
+      background-color: #000;
+   }
+   
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 25px;
+   }
+.navbar .icon{
+    display: none;
+   }
+div#myNav {
+      display: none;
+   }
+a.closebtn {
+      display: none;
+   }
+@media only screen and (min-width: 1001px) and (max-width: 1885px){
+    .navbar {
+          overflow: hidden;
+          position: fixed;
+          bottom: 0px !important;
+          height: 0px;
+          margin: 0 27% 0 27%;
+          padding: 0px 3% 0 3%;
+          border-radius: 15px 15px 0 0;
+          background-color: #000;
+       }
+       
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+        font-size: 18px;
+       }
+    .navbar .icon{
+        display: none;
+       }
+    div#myNav {
+          display: none;
+       }
+    a.closebtn {
+          display: none;
+       }
+}
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+    .navbar a {
+        display: none;
+        text-align: center;
+        padding: 0px 20% 0 20%;
+      }
+    .navbar a.icon {
+        float: initial;
+        display: block;
+        margin: 0px 0px 0 0;
+      }
+    .navbar {
+        overflow: hidden;
+          position: fixed;
+          bottom: 0px !important;
+          height: 0px;
+          margin: 0 25% 0 25%;
+          padding: 0px 23% 0 23%;
+          border-radius: 15px 15px 0 0;
+          background-color: #000;
+       }
+    .overlay {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-y: hidden;
+      transition: 0.5s;
+     }
+     
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+     }
+     
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+     }
+     
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+     }
+     
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+     }
+    div#myNav {
+        display: block;
+     }   
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .navbar {
+        overflow: hidden;
+          position: fixed;
+          bottom: 0px !important;
+          height: 0px;
+          margin: 0 25% 0 25%;
+          padding: 0px 25% 0 25%;
+          border-radius: 15px 15px 0 0;
+          background-color: #000;
+       }
+    .navbar a {
+        display: none;
+        text-align: center;
+        padding: 0px 20% 0 20%;
+      }
+    .navbar a.icon {
+        float: initial;
+        display: block;
+        margin: 0px 0px 0 0;
+      }
+    div#myNav {
+        display: block;
+     }
+    .overlay {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-y: hidden;
+      transition: 0.5s;
+     }
+     
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+     }
+     
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+     }
+     
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+     }
+     
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+     }
+}

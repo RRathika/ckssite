@@ -1,0 +1,152 @@
+.fa-2x {
+    font-size: 2em;
+  }
+  
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+  
+  nav {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  ul{
+    border: 2px solid white;
+    border-radius: 30px;
+  }
+  nav ul,
+  nav li {
+    outline: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li a {
+    position: relative;
+  }
+  
+  .has-subnav .fa {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: 60px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  
+  .fa-bars {
+    margin-top: -31px;
+    font-size: 25px;
+  }
+  
+  .main-menu {
+    position: fixed;    
+    bottom: 25%;
+    height: auto;
+    left: 0;
+    width: 60px;
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    z-index: 1000;
+    border-radius: 30px 30px 30px 30px;
+  }
+  
+  .main-menu li {
+    position: relative;
+    width: 60px;
+  }
+  
+  .main-menu li>a {
+    position: relative;
+    display: flex;
+    color: #999;
+    height: 60px;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+  }
+  
+  .main-menu .nav-icon {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+  }
+  
+  .main-menu .nav-text {
+    position: absolute;
+    visibility: hidden;
+    width: 0px;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  
+  .main-menu>ul.logout {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .no-touch .scrollable.hover {
+    overflow-y: hidden;
+  }
+  
+  .no-touch .scrollable.hover:hover {
+    overflow-y: auto;
+    overflow: visible;
+  }
+  
+  .main-menu li:hover>a,
+  nav.main-menu li.active>a,
+  .dropdown-menu>li>a:hover,
+  .dropdown-menu>li>a:focus,
+  .dropdown-menu>.active>a,
+  .dropdown-menu>.active>a:hover,
+  .dropdown-menu>.active>a:focus,
+  .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+  .dashboard-page nav.dashboard-menu ul li.active a {
+    color: #fff;
+    background-color: #ffffff2e;
+    border-radius: 30px 30px 30px 30px;
+  }
+  
+  li:hover span.nav-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 60px;
+    visibility: visible;
+    transition: all 0.2s linear;
+    width: 100px;
+    height: 70%;
+    top: 20%;
+    background-color: #F1F1F1;
+    color: #000;
+    border-radius: 30px 30px 30px 30px;
+  }
+  .menu-bg, nav-text
+{
+    background-repeat:repeat-x;
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50px;
+    z-index:-1;
+    top:0;
+    left:0;
+    -webkit-transition:.1s;
+    -o-transition:.1s;
+    transition:.1s;
+}

@@ -1,0 +1,26 @@
+<div class="col-sm-12 mt-5 text-center">
+    <h1>Job Name and description</h1>
+<table class="table table-striped w-100 fs-3 mt-5">
+    <thead>
+      <tr>
+        <th>SI.NO</th>
+        <th>Job Name</th>
+        <th>Job Description</th>
+        <th>Prefered Skills</th>
+        <th>.....</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info" *ngFor="let item of jobdata; let i = index;">
+        <th scope="row">{{i+1}}</th>
+        <td [innerHTML]="item.JOB_TITLE"></td>
+        <td [innerHTML]="item.JOB_DESCRIPTION"></td>
+        <td [innerHTML]="item.JOB_PREFERED_SKILL"></td>
+        <td>
+          <button (click)="oneditjobname(item)"><i class="fas fa-edit"></i></button>
+          <button (click)="ondeletejobname(item.JOB_ID,item)"><i class="fas fa-trash-alt"></i></button>
+        </td>      
+      </tr>
+    </tbody>
+  </table>
+</div>

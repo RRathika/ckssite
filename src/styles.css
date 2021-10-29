@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    overflow-x: hidden !important;
+}
+p{
+    font-family: CarnasW03-Regular !important;
+}
+h1,h2,h3,li,h6,font{
+    font-family: Raleway !important;
+}
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';

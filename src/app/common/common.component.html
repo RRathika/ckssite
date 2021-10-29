@@ -1,0 +1,48 @@
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img src="../../assets/images/ckslogo.png" alt="image">
+        </div>
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="/admin/dashboard">Home</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Job
+                    Details</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="/admin/joblist">List of Job details</a>
+                    </li>
+                    <li>
+                        <a href="/admin/joblistadd">Add Job details</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Job Name</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu1">
+                    <li>
+                        <a href="/admin/jobnamelist">List of job name</a>
+                    </li>
+                    <li>
+                        <a href="/admin/jobname">Add Job Name</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a (click)="logout()">LogOut</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="content" class="mt-5 shadow-lg p-3 mb-5 bg-white rounded">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    });
+</script>

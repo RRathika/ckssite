@@ -1,0 +1,37 @@
+<div class="col-sm-1"></div>
+<div class="col-sm-11 mt-5">
+    <div class="card card-primary mt-5" style="width:90%;">
+        <div class="card-header  bg-primary">
+            <h3 class="card-title">Add Job Name</h3>
+        </div>
+        <form [formGroup]="jobnameForm" (ngSubmit)="submit()">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputJobTittle">Job Title</label>
+                    <input type="text" class="form-control" id="exampleInputJobTittle" formControlName="JOB_TITLE"
+                        placeholder="Job title">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputJobDesc">Job Description</label>
+                    <ejs-richtexteditor id='defaultRTE' formControlName="JOB_DESCRIPTION" >
+                        <ng-template #valueTemplate>
+                            <p><b>Job Description:</b></p>
+                        </ng-template>
+                    </ejs-richtexteditor>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputJobDesc">Prefered Skills</label>
+                    <ejs-richtexteditor id='defaultRTE1' formControlName="JOB_PREFERED_SKILL">
+                        <ng-template #valueTemplate>
+                            <p><b>Prefered Skills:</b></p>
+                        </ng-template>
+                    </ejs-richtexteditor>
+                </div>
+            </div>
+
+            <div class="card-footer" class="col text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

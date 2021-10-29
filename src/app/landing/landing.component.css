@@ -1,0 +1,419 @@
+#btn-close-modal 
+{
+   width:100%;
+   text-align: center;
+   cursor:pointer;
+   color:#fff;
+ }
+ 
+ .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+  
+  .flex-item {
+    width: 50%;
+    min-height: 50%;
+    text-decoration: none;
+  }
+
+h1{  
+ margin: 60px 0 0 0px;
+ font-family: Raleway;
+ font-size: 48px;
+ font-weight: bold;
+ color: #222429;
+ text-align: center;
+}
+p{
+ text-align: center;
+ font-family: CarnasW03-Regular;
+ font-size: 23px;
+ color: #222429;
+ /*margin: 0 0 0 120px;*/
+}
+#cksitservice {
+ background-color: #fff;
+}
+#designapps {
+ background-color: #fff;
+}
+#cksitservicehover,#cksconsultinghover,#cksdevopshover,#ckscareerinhover{
+   display: none;
+}
+
+#ckscareerin{
+ background-image: url(../../assets/images/careerin.png);
+ background-color: #dddddde0;
+ background-repeat: no-repeat;
+ background-size: cover;
+ overflow: hidden;
+}
+#cksconsulting{
+ background-image: url(../../assets/images/consulting.png);
+ background-color: #dddddde0;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+#imgsrc{
+ transform: rotateX(0deg) rotateZ(-45deg);   
+ margin-top: 43px;
+ margin-left: -7px;
+ width: 135px;
+}
+font{
+ font-size: 75px;
+ color: #000;
+}
+.ckslogo {
+ position: fixed;
+ left: 50%;
+ top: 50%;
+ margin-left: -65px;
+ margin-top: -125px; 
+ width: 2%;
+}
+
+.box.active ~ .ckslogo {
+ z-index: 100; }
+
+.ckslogo h1 {
+ text-indent: -9999px;
+ height: 60px;
+ margin: 0; }
+
+.ckslogo .logo-image {
+ display: block; 
+ transform: rotateX(10deg) rotateZ(45deg);
+  width: 130px;
+ height: 130px; 
+ object-fit: contain;
+ box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.16);
+ background-color: #ffffff;
+}
+#itserviceid:hover  #cksitservicehover{ 
+ display: inline;
+ position: relative; 
+ top: 0;     
+}
+#cksconsulting:hover  #cksconsultinghover{ 
+   display: inline;
+   position: relative; 
+   top: 0;     
+  }
+  #ckscareerin:hover #ckscareerinhover{ 
+   display: inline;
+   position: relative; 
+   top: 0;     
+  }
+  #devopsid:hover #cksdevopshover{
+   display: inline;
+   position: relative; 
+   top: 0;
+  }
+#itserviceid:hover{
+   background-image: url(../../assets/images/itservice.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: #dddddde0;
+}
+#cksconsulting:hover{
+   background-image: url(../../assets/images/consultinghover.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: #dddddde0;
+}
+#ckscareerin:hover{
+   background-image: url(../../assets/images/careerinhover.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: #dddddde0;
+}
+#devopsid:hover{
+   background-image: url(../../assets/images/devopshover.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: #dddddde0;
+}
+#itserviceid:hover #cksitservice{ 
+   display: none;
+   cursor: pointer;
+}
+#ckscareerin:hover #ckscareer{ 
+   display: none;
+   cursor: pointer;
+}
+#cksconsulting:hover #cksconsult{ 
+   display: none;
+   cursor: pointer;
+}
+#devopsid:hover #cksdevapps{ 
+   display: none;
+   cursor: pointer;
+}
+#ckscareerin:hover font.designin{
+ color: #ffc727 !important;
+}
+#cksconsulting:hover font.designc{
+ color: #79a85a !important;
+}
+#cksdevapps:hover font.designapps{
+ color: #a85a96 !important;
+}
+.navbar {
+ overflow: hidden;
+   position: absolute;
+   bottom: 0px !important;
+   height: 0px;
+   margin: 0 25% 0 25%;
+   padding: 0px 11% 0 11%;
+   border-radius: 15px 15px 0 0;
+   background-color: #000;
+}
+
+.navbar a {
+ float: left;
+ display: block;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+.navbar .icon{
+ display: none;
+}
+div#myNav {
+   display: none;
+}
+a.closebtn {
+   display: none;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+.flex-container{
+    
+      flex-wrap: wrap;
+      height: 100vh;
+  }
+h1{  
+ margin: 50% 0 0 0px;
+ font-family: Raleway;
+ font-size: 24px;
+ font-weight: bold;
+ color: #222429;
+ text-align: center;
+}
+p{
+ 
+ font-family: CarnasW03-Regular;
+ font-size: 14px;
+ color: #222429;
+ margin: 0px 0 0 0px;
+ text-align: center;
+}
+font{
+ font-size: 45px !important;
+}
+.navbar a {
+   display: none;
+   text-align: center;
+ }
+.navbar a.icon {
+   float: initial;
+   display: block;
+   margin: 0px 0px 0 0;
+ }
+ .overlay {
+ height: 0%;
+ width: 100%;
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0, 0.9);
+ overflow-y: hidden;
+ transition: 0.5s;
+}
+
+.overlay-content {
+ position: relative;
+ top: 25%;
+ width: 100%;
+ text-align: center;
+ margin-top: 30px;
+}
+
+.overlay a {
+ padding: 8px;
+ text-decoration: none;
+ font-size: 36px;
+ color: #818181;
+ display: block;
+ transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+ color: #f1f1f1;
+}
+
+.overlay .closebtn {
+ position: absolute;
+ top: 20px;
+ right: 45px;
+ font-size: 60px;
+}
+div#myNav {
+   display: block;
+}
+}
+@media only screen and (min-width: 1885px){
+
+h1{  
+   margin: 10% 0 0 0px;
+   font-family: Raleway;
+   font-size: 100px!important;
+   font-weight: bold;
+   color: #222429;
+   text-align: center;
+  }
+  p{
+   
+   font-family: CarnasW03-Regular;
+   font-size: 40px;
+   color: #222429;
+   margin: 0px 0 0 0px;
+   text-align: center;
+  }
+  .ckslogo .logo-image {
+   display: block; 
+   transform: rotateX(10deg) rotateZ(45deg);
+    width: 140px;
+   height: 140px; 
+   object-fit: contain;
+   box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.16);
+   background-color: #ffffff;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+
+h1{  
+ margin: 30% 0 0 0px;
+ font-family: Raleway;
+ font-size: 24px;
+ font-weight: bold;
+ color: #222429;
+ text-align: center;
+}
+p{
+ 
+ font-family: CarnasW03-Regular;
+ font-size: 14px;
+ color: #222429;
+ margin: 0px 0 0 0px;
+ text-align: center;
+}
+font{
+ font-size: 45px !important;
+}
+.navbar a {
+   display: none;
+   text-align: center;
+ }
+.navbar a.icon {
+   float: initial;
+   display: block;
+   margin: 0px 0px 0 0;
+ }
+div#myNav {
+   display: block;
+}
+ .overlay {
+ height: 0%;
+ width: 100%;
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0, 0.9);
+ overflow-y: hidden;
+ transition: 0.5s;
+}
+
+.overlay-content {
+ position: relative;
+ top: 25%;
+ width: 100%;
+ text-align: center;
+ margin-top: 30px;
+}
+
+.overlay a {
+ padding: 8px;
+ text-decoration: none;
+ font-size: 36px;
+ color: #818181;
+ display: block;
+ transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+ color: #f1f1f1;
+}
+
+.overlay .closebtn {
+ position: absolute;
+ top: 20px;
+ right: 45px;
+ font-size: 60px;
+}
+}
+#headhover{
+   margin: 50px 0 0 0;
+   text-align: initial;
+   margin-left: 50px!important;
+}
+#parahover{
+   text-align: initial;
+   margin-left: 50px!important;
+   font-size: 18px;
+}
+#clickbutton1{
+   margin-left: 50px!important;
+   font-size: 20px;
+   background-color: #25536a;
+   color: #fff;
+   border: none;
+   width: 120px;
+   border-radius: 5px;
+}
+#clickbutton2{
+   margin-left: 50px!important;
+   font-size: 20px;
+   background-color: #ffc727;
+   color: #fff;
+   border: none;
+   width: 120px;
+   border-radius: 5px;
+}
+#clickbutton3{
+   margin-left: 50px!important;
+   font-size: 20px;
+   background-color: #79a85a;
+   color: #fff;
+   border: none;
+   width: 120px;
+   border-radius: 5px;
+}
+#clickbutton4{
+   margin-left: 50px!important;
+   font-size: 20px;
+   background-color: #a85a96;
+   color: #fff;
+   border: none;
+   width: 120px;
+   border-radius: 5px;
+}

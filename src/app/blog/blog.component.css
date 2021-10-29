@@ -1,0 +1,17 @@
+.banner h1 {
+    margin: 50px;
+    font-size: 50px;
+}
+.banner {
+    color: dark;
+    background: url('../../assets/images/About-us.jpg')top left/cover no-repeat;
+    height: 200px;
+    display: flex;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+p,li{
+    text-align: justify !important;
+    font-size: 20px;
+    font-family: CarnasW03-Regular !important;
+}

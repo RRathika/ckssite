@@ -1,0 +1,83 @@
+<app-sidemenu></app-sidemenu>
+<div class="container-fluid" id="joblist">
+    <div class="banner">
+        <div class="banner-text">
+            <h1 style="color: white;">{{name}}</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header">
+                    <h1 style="text-align: center;text-transform: uppercase;">Apply for this position</h1>
+                </div>
+            </div>            
+            <div class="col-sm-3 col-md-6 col-lg-6 col-xl-6" style="text-align: left;">
+                    <h1 class="display-3">{{name}}</h1>
+                    <p class="text-justify">Responsible for building scalable and flexible Java solutions, as per
+                        business problems and strong focus on adoption of best practices.
+                        Define Algorithm and Data structure from a design and implementation perspective
+                        Design, review and ensure performance and security for APIs.
+                        Define and develop core frameworks that will be used as base for API development
+                        Support conceptual technical solutions, evaluate& implement new technologies/tools
+                        Ability to write test driven development code. Familiarity with UI testing frameworks like JUnit
+                        Responsible for high quality code that achieves no technical debt within SonarQube
+                        Well versed in creating reusable components to speedup UI development
+                        Should be able to create POCs for trying out new technology.</p>
+                </div>
+                <div class="col-sm-3 col-md-6 col-lg-6 col-xl-6">
+                    <div class="card">
+                        <form [formGroup]="jobForm" class="form-horizontal" (ngSubmit)="onSubmit()"
+                            style="padding:5%;">
+                            <div class="form-group">
+                                <label for="Input1">Email address</label>
+                                <input type="email" formControlName="Email" class="form-control" id="Input1"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="Name1">Name</label>
+                                <input type="letter" formControlName="Name" class="form-control" id="Name1"
+                                    placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phnumber">Phone no</label>
+                                <input type="Number" formControlName="MobileNo" class="form-control" id="phnumber"
+                                    placeholder="Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="Select1">Applied position</label>
+                                <select formControlName="JobName" class="form-control dropdown-primary" id="Select1">
+                                    <option value="{{name}}" selected>{{name}}</option>
+                                    <!-- <option value="BB">Back End Developer</option>
+                        <option value="CC">Automation Testing</option>
+                        <option value="DD">Software Engineer</option>
+                        <option value="EE">Mobile App Development</option> -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Textarea1">Cover letter</label>
+                                <textarea formControlName="Message" class="form-control" id="Textarea1"
+                                    rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="File1">Upload CV/Resume </label>
+                                <input type="file" formControlName="ResumeFile" class="form-control-file" id="File1"
+                                    (change)="onSelectFile($event)">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check1">
+                                <label class="form-check-label" for="eCheck1">By using this form you agree with the
+                                    storage and
+                                    handling of your
+                                    data by this website. *</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="font-size: 20px;">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<app-footer></app-footer>
+<app-menu></app-menu>

@@ -1,0 +1,50 @@
+.footer-bar {
+    overflow: hidden;
+    padding-bottom: 30px;
+    }
+    .fa-map-marker-alt {
+    font-size: 25px;
+    color: white;
+    }
+    .footer-bar {
+    color: #fff;
+    line-height: 34px;
+    }
+    .footer-bar p {
+    padding-top: 15px;
+    }
+    .fa-facebook-square, .fa-instagram, .fa-linkedin-square, .fa-twitter-square {
+    color: white;
+    padding-top: 15px;
+    padding: 2px;
+    }
+    .footer-bar h3 {
+    color: white;
+    font-weight: bold;
+    padding-top: 30px;
+    }
+    .fa-desktop, .fa-mobile, .fa-newspaper { 
+    font-size: 15px;
+    color: white;
+    padding-top: 5px !important;
+    font-size: 25px;
+        padding-right: 5px;
+    }
+    .footer-bar h6 {
+    padding-top: 40px;
+    font-size: 15px;
+    line-height: 34px;
+    }
+    .copyright {
+    margin-top: 0;
+        padding-top: 0;
+    
+    }
+    .copyright {
+      background-color: #131010;
+      padding: 10px;
+      width: 100%;
+      }
+      li{
+        font-size: initial
+      }
