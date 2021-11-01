@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-gallary',
   templateUrl: './gallary.component.html',
-  styleUrls: ['./gallary.component.css']
+  styleUrls: ['./gallary.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GallaryComponent implements OnInit {
-
+  //items: GalleryItem[] = [];
   constructor() { }
 
   ngOnInit(): void {

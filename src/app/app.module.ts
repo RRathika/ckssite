@@ -36,6 +36,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { GalleryModule } from 'ng-gallery';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +78,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatFormFieldModule,
     MatInputModule,
     MatCarouselModule.forRoot(),
-    NgImageSliderModule
+    NgImageSliderModule,    
+    GalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
