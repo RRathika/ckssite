@@ -43,7 +43,7 @@ export class CareerComponent implements OnInit {
       url:'Angular_Developers'
     },
     {
-      jobname:'Java full stack Developer',
+      jobname:'Java fullstack Developer',
       commonname:'Java Developer',
       place:'Trivandrum',
       priority:'High',

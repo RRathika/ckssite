@@ -11,16 +11,17 @@
             <div class="container">
                 <form  [formGroup]="contactForm" class="form-horizontal" (ngSubmit)="onSubmit()">
                     <label for="fname">First Name(Rquired)</label>
-                    <input type="text" formControlName="ContactName" id="fname" name="firstname">
+                    <input type="text" formControlName="Name" id="fname" name="firstname">
                     <label for="email">Email address(Required)</label>
                     <input type="email" formControlName="Email" class="form-control" id="email">
 
                     <label for="subject">Subject</label>
                     <input type="text" formControlName="Subject" id="subject" name="subject">
                     <label for="your message">Your message</label>
-                    <textarea id="your message" formControlName="Message" name="your message" style="height:200px"></textarea>
+                    <textarea id="your message" formControlName="YourMessage" name="your message" style="height:200px"></textarea>
 
                     <input type="submit" value="SEND">
+                    <p *ngIf="message" class="text-success">{{message}}</p>
                 </form>
             </div>
 

@@ -150,3 +150,6 @@
     -o-transition:.1s;
     transition:.1s;
 }
+span{
+  color:#fff;
+}

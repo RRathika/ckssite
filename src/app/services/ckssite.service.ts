@@ -14,7 +14,7 @@ export class ckssiteApiService {
     return this.httpclient.post('https://localhost:44348/api/JobDetail/saveUpdateJobDetails', data)
   }
   savecontactdetails(data: any): Observable<any> {
-    return this.httpclient.post('https://localhost:44348/api/ContactDetails/saveUpdateContact', data)
+    return this.httpclient.post('http://localhost:3000/api/createcontact', data)
   }
   getjobname(): Observable<any> {
     return this.httpclient.get('http://localhost:3000/api/getjob');

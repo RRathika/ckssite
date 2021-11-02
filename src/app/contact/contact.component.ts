@@ -15,13 +15,15 @@ export class ContactComponent implements OnInit {
   loading = false;
   submitted = false;
   id=0;
+  message: any;
   contactForm: FormGroup = this.formBuilder.group({
     Id:[0],
-    ContactName: ['', Validators.required],
+    Name: ['', Validators.required],
     Email: ['', [Validators.required, Validators.email]],
     Subject: ['', Validators.required],
-    Message: ['', [Validators.required]]
+    YourMessage: ['', [Validators.required]]
   });
+
   constructor(private formBuilder: FormBuilder, private router: Router, private _ApiService: ckssiteApiService) { }
 
   ngOnInit(): void {
@@ -32,8 +34,12 @@ export class ContactComponent implements OnInit {
     this.loading = true;
    this._ApiService.savecontactdetails(this.contactForm?.value)
       .subscribe(data => {
-        console.log(data);
-        this.router.navigate(['/landing']);
+        console.log(data.status);
+        this.contactForm.reset();
+        if(data.status)
+        {
+          this.message='your message submitted successfully';
+        }
       });
     }
     else {
