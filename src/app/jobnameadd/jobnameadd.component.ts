@@ -12,7 +12,7 @@ import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@s
 })
 export class JobnameaddComponent implements OnInit {
   formData: any = new FormData();
-  //jobnameForm?: JobnameForm[];
+  // jobnameForm?: JobnameForm[];
   loading = false;
   submitted = false;
   id?:number;

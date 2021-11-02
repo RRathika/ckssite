@@ -36,7 +36,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { NgImageSliderModule } from 'ng-image-slider';
-import { GalleryModule } from 'ng-gallery';
+// import { GalleryModule } from 'ng-gallery';
+// import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+// import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +81,8 @@ import { GalleryModule } from 'ng-gallery';
     MatInputModule,
     MatCarouselModule.forRoot(),
     NgImageSliderModule,    
-    GalleryModule
+    // GalleryModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
