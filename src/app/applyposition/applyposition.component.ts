@@ -26,6 +26,7 @@ export class ApplypositionComponent implements OnInit {
   file: any;
   filterData: any[] = [];
   jobname: any;
+  url:any;
   constructor(private formBuilder: FormBuilder, private router: Router,private route:ActivatedRoute, private _ApiService: ckssiteApiService) { }
 
 
@@ -35,7 +36,8 @@ export class ApplypositionComponent implements OnInit {
       this.name = data.get('name');
       this.jobname=this.name.replace("_"," "); 
     });
-    
+    this.url=window.location.href;
+    console.log(this.url)
   }
   onSelectFile(event: any) {
     this.file = event;

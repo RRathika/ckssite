@@ -24,8 +24,8 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="dropdown" style="padding: 0 7%;">
-                        <select style="font-size: 18px;width: 100%;" *ngFor="let item of jobdata; let i = index;">
-                            <option>{{item.Job_Title}}</option>
+                        <select style="font-size: 18px;width: 100%;" >
+                            <option *ngFor="let item of jobdata; let i = index;" value="item.Job_Title">{{item.Job_Title}}</option>
                         </select>
                     </div>
                 </div>

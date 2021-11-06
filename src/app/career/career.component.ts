@@ -9,17 +9,20 @@ import { ckssiteApiService } from '../services/ckssite.service';
 })
 export class CareerComponent implements OnInit {
   jobdata: any;
+  href: any;
 
   constructor(private _ApiService: ckssiteApiService,private router: Router) { }
   ngOnInit(): void {
     this.loadjobname();
   }
+    
   loadjobname(){
     this._ApiService.getjobname().subscribe(data=>{
       console.log(data['data']);
       this.jobdata=data['data'];
     })
   }
+  
   jobs =[
     {
       jobname:'Java Developers',
