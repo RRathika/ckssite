@@ -26,12 +26,12 @@ export class JobnameaddComponent implements OnInit {
       this.result=response;
       console.log(this.result)
       if(response){        
-        this.jobnameForm.patchValue(response);
+        //this.jobnameForm.patchValue(response);
         this.id=response.JOB_ID;
         console.log(this.id);
         this.jobnameForm.patchValue({
-          JOB_DESCRIPTION:this.result.JOB_DESCRIPTION,
-          JOB_PREFERED_SKILL:this.result.JOB_PREFERED_SKILL
+          Job_Description:this.result.Job_Description,
+          Job_Prefered_Skill:this.result.Job_Prefered_Skill
         })
       }
     })
@@ -53,17 +53,17 @@ export class JobnameaddComponent implements OnInit {
   //   fontNames: ['Helvetica', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Roboto', 'Times']
   // }
   jobnameForm: FormGroup = this.formBuilder.group({
-    JOB_TITLE:['',Validators.required],
-    JOB_DESCRIPTION:['',Validators.required],
-    JOB_PREFERED_SKILL:['',Validators.required]
+    Job_Title:['',Validators.required],
+    Job_Description:['',Validators.required],
+    Job_Prefered_Skill:['',Validators.required]
   })
 submit(){
   if(this.jobnameForm.valid)
   {
-    this.trimdata=this.jobnameForm.value['JOB_PREFERED_SKILL'];
+    this.trimdata=this.jobnameForm.value['Job_Prefered_Skill'];
     this.final=this.trimdata.replace(/\s/g, "");;
     // console.log(this.final);
-    this.jobnameForm.value['JOB_PREFERED_SKILL']=this.final;
+    this.jobnameForm.value['Job_Prefered_Skill']=this.final;
     if(this.id)
     {
       this._ApiService.updatejobname(this.id,this.jobnameForm?.value).subscribe(data=>{

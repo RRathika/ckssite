@@ -62,3 +62,6 @@ input{
 i{
   font-size: 17px;
 }
+.input-group-append{
+  width: 100%;
+}

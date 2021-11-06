@@ -5,6 +5,7 @@
       <tr>
         <th>SI.NO</th>
         <th>Job Name</th>
+        <th>Priority</th>
         <th>Start Date</th>
         <th>End Date</th>
         <th>Location</th>
@@ -17,7 +18,8 @@
     <tbody>
       <tr class="table-info" *ngFor="let item of jobdata; let i = index;">
         <th scope="row">{{i+1}}</th>
-        <td>{{item.Job_Id}}</td>
+        <td>{{item.Job_Title}}</td>
+        <td>{{item.Job_Priority}}</td>
         <td>{{item.Job_StartDate}}</td>
         <td>{{item.Job_EndDate}}</td>
         <td>{{item.Job_Location}}</td>

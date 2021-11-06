@@ -35,10 +35,9 @@ export class ckssiteApiService {
     return this.httpclient.get('http://localhost:3000/api/getjobspost');
   }
   updatejobpost(id:any,data:any):Observable<any>{
-    return this.httpclient.put(`http://localhost:3000/api/getjobspost/${id}`,data);
+    return this.httpclient.put(`http://localhost:3000/api/updatejobspost/${id}`,data);
   }
   deletejobpost(id:any,data:any):Observable<any>{
-    debugger
     return this.httpclient.put(`http://localhost:3000/api/deletepost/${id}`,data);
   }
 }

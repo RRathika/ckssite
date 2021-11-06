@@ -27,7 +27,7 @@ div#myNav {
 a.closebtn {
       display: none;
    }
-@media only screen and (min-width: 1001px) and (max-width: 1885px){
+@media only screen and (min-width: 1001px) {
     .navbar {
           overflow: hidden;
           position: fixed;

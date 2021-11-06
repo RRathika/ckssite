@@ -20,7 +20,8 @@ export class JobdetailsaddComponent implements OnInit {
   patchend:any;
   constructor(private _ApiService: ckssiteApiService,private router: Router, private formBuilder: FormBuilder,public datepipe:DatePipe) { }
   jobpostForm: FormGroup = this.formBuilder.group({
-    Job_Id:[Validators.required],
+    Job_Title:[Validators.required],
+    Job_Priority:[Validators.required],
     Job_StartDate:['',Validators.required],
     Job_Location:['',Validators.required],
     Job_Experience:['',Validators.required],
@@ -43,7 +44,8 @@ export class JobdetailsaddComponent implements OnInit {
         this.id=response.Id;
         this.jobpostForm.patchValue({
           Job_StartDate:this.patchstart,
-          Job_EndDate:this.patchend
+          Job_EndDate:this.patchend,
+          Job_Priority: this.result.Job_Priority
         })
       }
     })
@@ -60,14 +62,15 @@ export class JobdetailsaddComponent implements OnInit {
   submit(){
     //alert(this.jobpostForm.value);
     //console.log(this.jobpostForm.value['Job_StartDate']);
-    this.jobstartdate=this.jobpostForm.value['Job_StartDate'];
-    this.jobpostForm.value['Job_StartDate']= this.jobstartdate?this.jobstartdate.year+"-"+('0'+this.jobstartdate.month).slice(-2)
-    +"-"+('0'+this.jobstartdate.day).slice(-2):null;
-    this.jobenddate=this.jobpostForm.value['Job_EndDate'];
-    this.jobpostForm.value['Job_EndDate']=this.jobenddate?this.jobenddate.year+"-"+('0'+this.jobenddate.month).slice(-2)
-    +"-"+('0'+this.jobenddate.day).slice(-2):null;
+   
     if(this.id)
     {
+      this.jobstartdate=this.jobpostForm.value['Job_StartDate'];
+      this.jobpostForm.value['Job_StartDate']= this.jobstartdate?this.jobstartdate.year+"-"+('0'+this.jobstartdate.month).slice(-2)
+      +"-"+('0'+this.jobstartdate.day).slice(-2):null;
+      this.jobenddate=this.jobpostForm.value['Job_EndDate'];
+      this.jobpostForm.value['Job_EndDate']=this.jobenddate?this.jobenddate.year+"-"+('0'+this.jobenddate.month).slice(-2)
+      +"-"+('0'+this.jobenddate.day).slice(-2):null;
       this._ApiService.updatejobpost(this.id,this.jobpostForm?.value).subscribe(data=>{
         console.log(data);
         alert('Data updated successfully');
@@ -75,6 +78,12 @@ export class JobdetailsaddComponent implements OnInit {
       })
     }
     else{
+      this.jobstartdate=this.jobpostForm.value['Job_StartDate'];
+      this.jobpostForm.value['Job_StartDate']= this.jobstartdate?this.jobstartdate.year+"-"+('0'+this.jobstartdate.month).slice(-2)
+      +"-"+('0'+this.jobstartdate.day).slice(-2):null;
+      this.jobenddate=this.jobpostForm.value['Job_EndDate'];
+      this.jobpostForm.value['Job_EndDate']=this.jobenddate?this.jobenddate.year+"-"+('0'+this.jobenddate.month).slice(-2)
+      +"-"+('0'+this.jobenddate.day).slice(-2):null;
     this._ApiService.savejobpost(this.jobpostForm?.value)
     .subscribe(data => {
       if(data){
