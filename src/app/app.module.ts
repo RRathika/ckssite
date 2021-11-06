@@ -34,11 +34,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatCarouselModule } from '@ngmodule/material-carousel';
+// import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { NgImageSliderModule } from 'ng-image-slider';
-// import { GalleryModule } from 'ng-gallery';
-// import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-// import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,10 +78,10 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCarouselModule.forRoot(),
+    // MatCarouselModule.forRoot(),
     NgImageSliderModule,    
-    // GalleryModule,
-   
+    ShareButtonsModule,
+    ShareIconsModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
