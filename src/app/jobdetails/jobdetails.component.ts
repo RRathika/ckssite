@@ -33,7 +33,7 @@ export class JobdetailsComponent implements OnInit {
       //console.log(data['data'].length);
       this.jobdata=data;
       console.log(this.jobdata);      
-      this._ApiService.getjobname()
+     // this._ApiService.getjobname()
     })
   }
 

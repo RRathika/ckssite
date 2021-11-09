@@ -21,14 +21,16 @@ jobdata?:any;
   }
   loadjobname(){
     this._ApiService.getjobname().subscribe(data=>{
-      console.log(data['data']);
-      this.jobdata=data['data'];
+      console.log(data);
+      this.jobdata=data;
     })
   }
   ondeletejobname(id:any,item:any){    
     this._ApiService.deletejobname(id,item).subscribe(data=>{
+      if(data){
       alert('Deleted Successfully');
       this.loadjobname();
+      }
     })
   }
 }

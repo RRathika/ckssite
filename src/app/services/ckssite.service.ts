@@ -8,6 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class ckssiteApiService {
   deleteid: any;
+  deletejobnameid:any;
+  postbyname: any;
   constructor(private httpclient: HttpClient) { }
   public jobEdit = new BehaviorSubject<any>('');
   public jobpost = new BehaviorSubject<any>('');
@@ -18,16 +20,17 @@ export class ckssiteApiService {
     return this.httpclient.post('http://localhost:3000/api/createcontact', data)
   }
   getjobname(): Observable<any> {
-    return this.httpclient.get('http://localhost:3000/api/getjob');
+    return this.httpclient.get('https://ckssolutions.co.in/Api/jobdetails/viewbyname.php');
   }
   savejobname(data: any): Observable<any> {
-    return this.httpclient.post('http://localhost:3000/api/createjob', data);
+    return this.httpclient.post('https://ckssolutions.co.in/Api/jobdetails/create.php', data);
   }
   updatejobname(id:any,data:any):Observable<any>{
-    return this.httpclient.put(`http://localhost:3000/api/updatejob/${id}`,data);
+    return this.httpclient.put(`https://ckssolutions.co.in/Api/jobdetails/update.php`,data);
   }
-  deletejobname(id:any,data:any):Observable<any>{
-    return this.httpclient.put(`http://localhost:3000/api/deletejob/${id}`,data);
+  deletejobname(Job_Id:any,data:any):Observable<any>{
+    this.deletejobnameid=JSON.stringify({Job_Id})
+    return this.httpclient.put(`https://ckssolutions.co.in/Api/jobdetails/delete.php`,this.deletejobnameid);
   }
   savejobpost(data:any):Observable<any>{
     return this.httpclient.post('https://ckssolutions.co.in/Api/jobpost/create.php',data);
@@ -38,8 +41,16 @@ export class ckssiteApiService {
   updatejobpost(data:any):Observable<any>{
     return this.httpclient.put(`https://ckssolutions.co.in/Api/jobpost/update.php`,data);
   }
-  deletejobpost(id:any):Observable<any>{
-    this.deleteid=JSON.stringify({id})
+  deletejobpost(Id:any):Observable<any>{
+    this.deleteid=JSON.stringify({Id})
     return this.httpclient.put(`https://ckssolutions.co.in/Api/jobpost/delete.php`,this.deleteid);
+  }
+  getbynamepost(Job_Title:any):Observable<any>{
+    this.postbyname=JSON.stringify({Job_Title})
+    return this.httpclient.post('https://ckssolutions.co.in/Api/jobdetails/viewbyname.php',this.postbyname);
+  }
+  getbynamejobdetail(Job_Title:any):Observable<any>{
+    this.postbyname=JSON.stringify({Job_Title})
+    return this.httpclient.post('https://ckssolutions.co.in/Api/jobpost/viewbyname.php',this.postbyname);
   }
 }

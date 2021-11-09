@@ -44,12 +44,11 @@
                 </div>
             </div>
             <div class="col-sm-12" style="padding-top: 3%;">
-            <div class="col-sm-4" *ngFor="let job of jobs" id="carditem">
-                <a href="jobapply/{{job.url}}">
-                    <div class="card" [ngClass]="job.priority" id="card">
-                        <h1 class="font-weight-bold">{{job.jobname}}</h1>
-                        <!-- <p>{{job.commonname}}</p> -->
-                        <p>{{job.place}}</p>
+            <div class="col-sm-4" *ngFor="let job of jobpostdata" id="carditem">
+                <a (click)="apply(job.Job_Title)">
+                    <div class="card" [ngClass]="job.Job_Priority" id="card">
+                        <h1 class="font-weight-bold">{{job.Job_Title}}</h1>
+                        <p>{{job.Job_Location}}</p>
                     </div>
                 </a>
             </div>

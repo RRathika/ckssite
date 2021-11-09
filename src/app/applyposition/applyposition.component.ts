@@ -13,8 +13,8 @@ export class ApplypositionComponent implements OnInit {
   applyform?: ApplyForm[];
   loading = false;
   submitted = false;
-  id=0;
-  name : any;
+  id = 0;
+  name: any;
   jobForm: FormGroup = this.formBuilder.group({
     Name: ['', Validators.required],
     Email: ['', [Validators.required, Validators.email]],
@@ -26,18 +26,36 @@ export class ApplypositionComponent implements OnInit {
   file: any;
   filterData: any[] = [];
   jobname: any;
-  url:any;
-  constructor(private formBuilder: FormBuilder, private router: Router,private route:ActivatedRoute, private _ApiService: ckssiteApiService) { }
+  url: any;
+  jobdata: any;
+  jobdata1: any;
+  constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute, private _ApiService: ckssiteApiService) { }
 
 
   ngOnInit(): void {
     console.log(this.formBuilder);
-    this.route.paramMap.subscribe(data=>{     
+    this.route.paramMap.subscribe(data => {
       this.name = data.get('name');
-      this.jobname=this.name.replace("_"," "); 
+      this.jobname = this.name.replace("_", " ");
+      this.loadjobdetail(this.jobname);
+      this.loadjobpost(this.jobname);
     });
-    this.url=window.location.href;
+    this.url = window.location.href;
     console.log(this.url)
+  }
+  loadjobdetail(name: any) {
+    console.log(name);    
+    this._ApiService.getbynamepost(name).subscribe(data => {
+      console.log(data);
+      this.jobdata=data;
+    })
+  }
+  loadjobpost(name:any){
+    console.log(name);    
+    this._ApiService.getbynamejobdetail(name).subscribe(data => {
+      console.log(data);
+      this.jobdata1=data;
+    })
   }
   onSelectFile(event: any) {
     this.file = event;
@@ -46,16 +64,16 @@ export class ApplypositionComponent implements OnInit {
       // For Image Resolution
       const img = new Image();
       img.src = reader.result as string;
-      img.onload = () =>{
+      img.onload = () => {
         const height = img.naturalHeight;
         const width = img.naturalWidth;
-        
+
       }
       // this.sliderList[index].sliderImageUrl = reader.result as string;
     }
-   
+
     reader.readAsDataURL(event.target.files[0]);
-    this.jobForm.value['ResumeFile']=event.target.files[0];
+    this.jobForm.value['ResumeFile'] = event.target.files[0];
   }
   assignFormData() {
     var formData: any = new FormData();
@@ -64,27 +82,26 @@ export class ApplypositionComponent implements OnInit {
     formData.append('Email', this.jobForm.value['Email']);
     formData.append('MobileNo', this.jobForm.value['MobileNo']);
     formData.append('JobName', this.jobForm.value['JobName']);
-    formData.append('Message', this.jobForm.value['Message']);    
-    formData.append('ResumeFile',this.jobForm.value['ResumeFile']);
-    
+    formData.append('Message', this.jobForm.value['Message']);
+    formData.append('ResumeFile', this.jobForm.value['ResumeFile']);
+
     return formData;
   }
   onSubmit() {
     console.log(this.assignFormData());
-    
+
     if (this.assignFormData()) {
-    
-        this.submitted = true;
-        this.loading = true;
-       this._ApiService.savejobapplyperson(this.assignFormData())
-          .subscribe(data => {
-            if(data)
-            {
+
+      this.submitted = true;
+      this.loading = true;
+      this._ApiService.savejobapplyperson(this.assignFormData())
+        .subscribe(data => {
+          if (data) {
             console.log(data);
-              this.router.navigate(['/landing']);
-            }            
-          });
-      
+            this.router.navigate(['/landing']);
+          }
+        });
+
     }
     else {
       console.log("Enter correct Data");

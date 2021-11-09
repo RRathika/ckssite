@@ -12,7 +12,8 @@ import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@s
 })
 export class JobnameaddComponent implements OnInit {
   formData: any = new FormData();
-  // jobnameForm?: JobnameForm[];
+  datareplace:any;
+  description:any
   loading = false;
   submitted = false;
   id?:number;
@@ -27,31 +28,16 @@ export class JobnameaddComponent implements OnInit {
       console.log(this.result)
       if(response){        
         //this.jobnameForm.patchValue(response);
-        this.id=response.JOB_ID;
+        this.id=response.Job_Id;
         console.log(this.id);
         this.jobnameForm.patchValue({
+          Job_Title:this.result.Job_Title,
           Job_Description:this.result.Job_Description,
           Job_Prefered_Skill:this.result.Job_Prefered_Skill
         })
       }
     })
   }
-
-  // config = {
-  //   placeholder: '',
-  //   tabsize: 2,
-  //   height: '200px',
-  //   uploadImagePath: '/api/upload',
-  //   toolbar: [
-  //       ['misc', ['codeview', 'undo', 'redo']],
-  //       ['style', ['bold', 'italic', 'underline', 'clear']],
-  //       ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
-  //       ['fontsize', ['fontname', 'fontsize', 'color']],
-  //       ['para', ['style', 'ul', 'ol', 'paragraph', 'height']],
-  //       ['insert', ['table', 'picture', 'link', 'video', 'hr']]
-  //   ],
-  //   fontNames: ['Helvetica', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Roboto', 'Times']
-  // }
   jobnameForm: FormGroup = this.formBuilder.group({
     Job_Title:['',Validators.required],
     Job_Description:['',Validators.required],
@@ -61,9 +47,11 @@ submit(){
   if(this.jobnameForm.valid)
   {
     this.trimdata=this.jobnameForm.value['Job_Prefered_Skill'];
-    this.final=this.trimdata.replace(/\s/g, "");;
-    // console.log(this.final);
+    this.final=this.trimdata.replace(/\s/g, "");
     this.jobnameForm.value['Job_Prefered_Skill']=this.final;
+    this.description =this.jobnameForm.value['Job_Description']
+    this.datareplace=this.description.replace("'","`");
+    this.jobnameForm.value['Job_Description']=this.datareplace;
     if(this.id)
     {
       this._ApiService.updatejobname(this.id,this.jobnameForm?.value).subscribe(data=>{

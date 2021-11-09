@@ -2,7 +2,7 @@
 <div class="container-fluid" id="joblist">
     <div class="banner">
         <div class="banner-text">
-            <h1 style="color: white;">{{jobname}}</h1>
+            <h1 style="color: white;">{{jobname | uppercase }}</h1>
         </div>
     </div>
 
@@ -13,18 +13,18 @@
                     <h1 style="text-align: center;text-transform: uppercase;">Apply for this position</h1>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-6 col-lg-6 col-xl-6" style="text-align: left;">
-                <h1 class="display-3">{{jobname}}</h1>
-                <p class="text-justify">Responsible for building scalable and flexible Java solutions, as per
-                    business problems and strong focus on adoption of best practices.
-                    Define Algorithm and Data structure from a design and implementation perspective
-                    Design, review and ensure performance and security for APIs.
-                    Define and develop core frameworks that will be used as base for API development
-                    Support conceptual technical solutions, evaluate& implement new technologies/tools
-                    Ability to write test driven development code. Familiarity with UI testing frameworks like JUnit
-                    Responsible for high quality code that achieves no technical debt within SonarQube
-                    Well versed in creating reusable components to speedup UI development
-                    Should be able to create POCs for trying out new technology.</p>
+            <div class="col-sm-3 col-md-6 col-lg-6 col-xl-6" style="text-align: left;" >
+                <div *ngFor="let job of jobdata">
+                <h1 class="display-3">{{jobname | uppercase }}</h1>
+                <p class="text-justify" [innerHTML]="job.Job_Description"></p>
+                <p [innerHTML]="job.Job_Prefered_Skill"></p>
+            </div>
+            <div *ngFor="let job of jobdata1">
+                <p *ngIf="job.Job_Location"><b>Job Location:</b>{{job.Job_Location}}</p>
+                <p *ngIf="job.Job_Type"><b>Job Type:</b>{{job.Job_Type}}</p>
+                <p *ngIf="job.Job_Experience"><b>Job Experience:</b>{{job.Job_Experience}}</p>
+                <p *ngIf="job.Job_Salary"><b>Job Salary:</b>{{job.Job_Salary}}</p>
+            </div>
                     <share-buttons theme="circles-dark"
                     [include]="['facebook','linkedin', 'telegram', 'twitter','whatsapp']"
                     [showIcon]="true" [showText]="false" url="url"

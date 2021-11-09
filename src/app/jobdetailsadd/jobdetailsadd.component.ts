@@ -36,12 +36,18 @@ export class JobdetailsaddComponent implements OnInit {
       this.result=response;     
       if(response){        
         this.jobpostForm.patchValue(response);
-        let part=response.Job_StartDate.split('T00:00:00.000Z');
+        let part=response.Job_StartDate.split('00:00:00');
+        console.log(part);
+        
         let parts=part[0].split('-');
         this.patchstart={year:+parts[0],month:+parts[1],day:+parts[2]};
-        let part1=response.Job_EndDate.split('T00:00:00.000Z');
+        console.log(this.patchstart);        
+        let part1=response.Job_EndDate.split('00:00:00');
+        console.log(part1);
+        
         let parts1=part1[0].split('-');
         this.patchend={year:+parts1[0],month:+parts1[1],day:+parts1[2]};
+        console.log(this.patchend); 
         this.id=response.Id;
         this.jobpostForm.patchValue({
           Job_StartDate:this.patchstart,
@@ -53,8 +59,8 @@ export class JobdetailsaddComponent implements OnInit {
   }
   loadjobname():void{
     this._ApiService.getjobname().subscribe(data=>{
-      console.log(data['data']);
-      this.jobdata=data['data'];
+      console.log(data);
+      this.jobdata=data;
     })
   }
   changeValue():void{
