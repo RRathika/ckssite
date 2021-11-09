@@ -6,17 +6,17 @@
         </div>
         <form [formGroup]="jobpostForm" (ngSubmit)="submit()">
             <div class="card-body">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="exampleInputJobTittle">Job Title</label>
                     <select class="form-select" aria-label="Default select example" formControlName="Job_Title">
                         <option *ngFor="let item of jobdata" [value]="item.Job_Title">{{ item.Job_Title }}</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="exampleInputJobTittle">Job Title</label>
-                        <select class="form-select" aria-label="Default select example" formControlName="Job_Id">
-                            <option *ngFor="let item of jobdata" [value]="item.JOB_ID">{{ item.JOB_TITLE }}</option>
+                        <select class="form-select" aria-label="Default select example" formControlName="JOB_TITLE">
+                            <option *ngFor="let item of jobdata" [value]="item.JOB_TITLE">{{ item.JOB_TITLE }}</option>
                         </select>
                     </div>
                     <div class="form-group">

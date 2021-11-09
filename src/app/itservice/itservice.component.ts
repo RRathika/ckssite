@@ -19,27 +19,25 @@ export class ItserviceComponent implements OnInit {
   ngOnInit(): void {
   }
   imageObject = [{
-    image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg',
-    thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg',
-    title: 'Hummingbirds are amazing creatures'
+    image: '../../assets/images/itservice/allied.png',
+    thumbImage: '../../assets/images/itservice/allied.png',
+    title: 'Allied Enterprises'
 }, {
-    image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/9.jpg',
-    thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/9.jpg'
+    image: '../../assets/images/itservice/goldncart.png',
+    thumbImage: '../../assets/images/itservice/goldncart.png',
+    title: 'Gold n cart handcrafted Jewels'
 }, {
-    image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/4.jpg',
-    thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/4.jpg',
-    title: 'Example with title.'
+    image: '../../assets/images/itservice/platez.png',
+    thumbImage: '../../assets/images/itservice/platez.png',
+    title: 'Platez'
 },{
-    image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/7.jpg',
-    thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/7.jpg',
-    title: 'Hummingbirds are amazing creatures'
+    image: '../../assets/images/itservice/rafale.png',
+    thumbImage: '../../assets/images/itservice/rafale.png',
+    title: 'Rafale Steel'
 }, {
-    image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/1.jpg',
-    thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/1.jpg'
-}, {
-    image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/2.jpg',
-    thumbImage: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/2.jpg',
-    title: 'Example two with title.'
+    image: '../../assets/images/itservice/vpr.png',
+    thumbImage: '../../assets/images/itservice/vpr.png',
+    title:'VPR Construction'
 }];
 
 }

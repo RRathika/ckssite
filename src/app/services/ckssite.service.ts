@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root' // just before your class
 })
 export class ckssiteApiService {
+  deleteid: any;
   constructor(private httpclient: HttpClient) { }
   public jobEdit = new BehaviorSubject<any>('');
   public jobpost = new BehaviorSubject<any>('');
@@ -29,15 +30,16 @@ export class ckssiteApiService {
     return this.httpclient.put(`http://localhost:3000/api/deletejob/${id}`,data);
   }
   savejobpost(data:any):Observable<any>{
-    return this.httpclient.post('http://localhost:3000/api/jobpost',data);
+    return this.httpclient.post('https://ckssolutions.co.in/Api/jobpost/create.php',data);
   }
   getjobpost():Observable<any>{
-    return this.httpclient.get('http://localhost:3000/api/getjobspost');
+    return this.httpclient.get('https://ckssolutions.co.in/Api/jobpost/view.php');
   }
-  updatejobpost(id:any,data:any):Observable<any>{
-    return this.httpclient.put(`http://localhost:3000/api/updatejobspost/${id}`,data);
+  updatejobpost(data:any):Observable<any>{
+    return this.httpclient.put(`https://ckssolutions.co.in/Api/jobpost/update.php`,data);
   }
-  deletejobpost(id:any,data:any):Observable<any>{
-    return this.httpclient.put(`http://localhost:3000/api/deletepost/${id}`,data);
+  deletejobpost(id:any):Observable<any>{
+    this.deleteid=JSON.stringify({id})
+    return this.httpclient.put(`https://ckssolutions.co.in/Api/jobpost/delete.php`,this.deleteid);
   }
 }

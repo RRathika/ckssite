@@ -20,6 +20,7 @@ export class JobdetailsaddComponent implements OnInit {
   patchend:any;
   constructor(private _ApiService: ckssiteApiService,private router: Router, private formBuilder: FormBuilder,public datepipe:DatePipe) { }
   jobpostForm: FormGroup = this.formBuilder.group({
+    Id:0,
     Job_Title:[Validators.required],
     Job_Priority:[Validators.required],
     Job_StartDate:['',Validators.required],
@@ -71,7 +72,7 @@ export class JobdetailsaddComponent implements OnInit {
       this.jobenddate=this.jobpostForm.value['Job_EndDate'];
       this.jobpostForm.value['Job_EndDate']=this.jobenddate?this.jobenddate.year+"-"+('0'+this.jobenddate.month).slice(-2)
       +"-"+('0'+this.jobenddate.day).slice(-2):null;
-      this._ApiService.updatejobpost(this.id,this.jobpostForm?.value).subscribe(data=>{
+      this._ApiService.updatejobpost(this.jobpostForm?.value).subscribe(data=>{
         console.log(data);
         alert('Data updated successfully');
         this.router.navigateByUrl('/admin/joblist');

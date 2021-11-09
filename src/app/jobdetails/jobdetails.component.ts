@@ -23,7 +23,7 @@ export class JobdetailsComponent implements OnInit {
     console.log(id);
     console.log(item);
     
-    this._ApiService.deletejobpost(id,item).subscribe(data=>{
+    this._ApiService.deletejobpost(id).subscribe(data=>{
       alert('Deleted Successfully');
       this.dataload();
     })
@@ -31,8 +31,8 @@ export class JobdetailsComponent implements OnInit {
   dataload(){
     this._ApiService.getjobpost().subscribe(data=>{
       //console.log(data['data'].length);
-      this.jobdata=data['data'];
-      console.log(this.jobdata['Job_Id']);      
+      this.jobdata=data;
+      console.log(this.jobdata);      
       this._ApiService.getjobname()
     })
   }

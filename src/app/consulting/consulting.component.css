@@ -32,8 +32,13 @@ body{
        .lead{
          font-size: 33px!important;
      }
+     
 }
-
+@media only screen and (min-width:601px) and (max-width:2885px){
+    .imageslider{
+        width: 100% !important;
+      }
+}
  @media only screen and (max-width:600px) {
     font{         
         font-size: 50px!important;       
@@ -41,6 +46,9 @@ body{
        .lead{
            font-size: 18px!important;
        }
+       .imageslider{
+        width: 100% !important;
+      }
 }
 .item
 {
