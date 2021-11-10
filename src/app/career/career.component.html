@@ -14,7 +14,7 @@
                 <div class="col-sm-4">
                     <div class="dropdown" style="padding: 0 7%;">
                         <select style="font-size: 18px;width: 100%;"(change)='onOptionsSelected($event)'>
-                            <option>Select Job Name</option>
+                            <option>Select All Job Name</option>
                             <option *ngFor="let item of jobdata; let i = index;">{{item.Job_Title}}</option>
                         </select>
                     </div>
@@ -22,7 +22,7 @@
                 <div class="col-sm-4">
                     <div class="dropdown" style="padding: 0 7%;">
                         <select style="font-size: 18px;width: 100%;"(change)='onjobtypeSelected($event)'>
-                            <option>Select Job Type</option>
+                            <option>Select All Job Type</option>
                             <option>Freelance</option>
                             <option>Full Time</option>
                             <option>Part Time</option>
@@ -32,7 +32,7 @@
                 <div class="col-sm-4">
                     <div class="dropdown" style="padding: 0 7%;">
                         <select style="font-size: 18px;width: 100%;"(change)='onOptionsjoblocation($event)'>
-                            <option>Select Job Location</option>                            
+                            <option>Select All Job Location</option>                            
                             <option>Work From Home</option>
                             <option>Nagercoil</option>
                             <option>Trivandrum</option>
