@@ -13,7 +13,7 @@ export class CareerComponent implements OnInit {
   jobpostdata: any;
   titleurl: any;
   finalurl: any;
-
+  jobnameselect:any;
   constructor(private _ApiService: ckssiteApiService,private router: Router) { }
   ngOnInit(): void {
     this.loadjobname();
@@ -40,83 +40,26 @@ export class CareerComponent implements OnInit {
     console.log(this.finalurl);    
     this.router.navigate(['/jobapply/'+this.finalurl])
   }
-//   jobs =[
-//     {
-//       jobname:'Java Developers',
-//       commonname:'Java Developer',
-//       place:'Trivandrum',
-//       priority:'High',
-//       url:'java_developer'
-//     },
-//     {
-//       jobname:'Mobile automation QA',
-//       commonname:'Mobile automation',
-//       place:'Trivandrum',
-//       priority:'Medium',
-//       url:'Mobile_automation_QA'
-//     },
-//     {
-//       jobname:'Angular Developers',
-//       commonname:'Front End Developer',
-//       place:'Trivandrum',
-//       priority:'Low',
-//       url:'Angular_Developers'
-//     },
-//     {
-//       jobname:'Java fullstack Developer',
-//       commonname:'Java Developer',
-//       place:'Trivandrum',
-//       priority:'High',
-//       url:'Java_full_stack_Developers'
-//     },
-//     {
-//       jobname:'Automation Engineer',
-//       commonname:'Automation Engineer',
-//       place:'Trivandrum',
-//       priority:'Low',
-//       url:'Automation_Engineer'
-//     },
-//     {
-//       jobname:'C# Developers',
-//       commonname:'C# Developer',
-//       place:'Trivandrum',
-//       priority:'Medium',
-//       url:'C#_Developers'
-//     },
-//     {
-//       jobname:'SharePoint Developers',
-//       commonname:'Front End Developer',
-//       place:'Trivandrum',
-//       priority:'Medium',
-//       url:'SharePoint_Developers'
-//     },
-//     {
-//       jobname:'UI Developers',
-//       commonname:'Front End Developer',
-//       place:'Trivandrum',
-//       priority:'Low',
-//       url:'UI_Developers'
-//     },
-//     {
-//       jobname:'Angular Developer Ionic',
-//       commonname:'Front End Developer',
-//       place:'Trivandrum',
-//       priority:'High',
-//       url:'Angular_Developer_Ionic'
-//     },
-//     {
-//       jobname:'BMC Helix Developers',
-//       commonname:'Software Developer',
-//       place:'Trivandrum',
-//       priority:'Low',
-//       url:'BMC_Helix_Developers'
-//     },
-//     {
-//       jobname:'ADF Developers',
-//       commonname:'Front End Developer',
-//       place:'Trivandrum',
-//       priority:'Medium',
-//       url:'ADF_Developers'
-//     }
-// ];
+  onOptionsSelected(e:any){
+    //console.log("the selected value is " + e.target.value);
+    this.jobnameselect=e.target.value;
+    // console.log(this.jobnameselect);    
+    this._ApiService.getbynamejobdetail(this.jobnameselect).subscribe(data=>{
+      this.jobpostdata=data;
+    })
+}
+onOptionsjoblocation(e:any){
+  this.jobnameselect=e.target.value;
+  // console.log(this.jobnameselect);    
+  this._ApiService.getbylocation(this.jobnameselect).subscribe(data=>{
+    this.jobpostdata=data;
+  })
+}
+onjobtypeSelected(e:any){
+  this.jobnameselect=e.target.value;
+    // console.log(this.jobnameselect);    
+    this._ApiService.getbytype(this.jobnameselect).subscribe(data=>{
+      this.jobpostdata=data;
+    })
+}
 }

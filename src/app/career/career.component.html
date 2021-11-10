@@ -10,40 +10,37 @@
             <div class="col-sm-12" style="padding-bottom: 2%;">
                 <h1 class="display-3 text-center" id="jobname">Our Job Listings</h1>
             </div>
-            <div class="col-sm-12">
-                <div class="col-sm-4">
-                    <div class="input-group" style="padding: 0 7%;">
-                       
-                            <input id="search-input" type="search" id="form1" class="form-control"
-                                placeholder="Search By Job Name" />
-                        
-                        <button id="search-button" type="button" class="btn btn-primary">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="col-sm-12">               
                 <div class="col-sm-4">
                     <div class="dropdown" style="padding: 0 7%;">
-                        <select style="font-size: 18px;width: 100%;" >
-                            <option *ngFor="let item of jobdata; let i = index;" value="item.Job_Title">{{item.Job_Title}}</option>
+                        <select style="font-size: 18px;width: 100%;"(change)='onOptionsSelected($event)'>
+                            <option>Select Job Name</option>
+                            <option *ngFor="let item of jobdata; let i = index;">{{item.Job_Title}}</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="form-group">
-                        <div class="input-group" style="padding: 0 7%;">
-                           
-                            <div class="input-group-append">
-                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" 
-                                ngbDatepicker #d="ngbDatepicker">
-                                <button class="btn btn-primary calendar" (click)="d.toggle()"
-                                    type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
+                    <div class="dropdown" style="padding: 0 7%;">
+                        <select style="font-size: 18px;width: 100%;"(change)='onjobtypeSelected($event)'>
+                            <option>Select Job Type</option>
+                            <option>Freelance</option>
+                            <option>Full Time</option>
+                            <option>Part Time</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="dropdown" style="padding: 0 7%;">
+                        <select style="font-size: 18px;width: 100%;"(change)='onOptionsjoblocation($event)'>
+                            <option>Select Job Location</option>                            
+                            <option>Work From Home</option>
+                            <option>Nagercoil</option>
+                            <option>Trivandrum</option>
+                        </select>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12" style="padding-top: 3%;">
+            <div class="col-sm-12" style="padding: 3%;">
             <div class="col-sm-4" *ngFor="let job of jobpostdata" id="carditem">
                 <a (click)="apply(job.Job_Title)">
                     <div class="card" [ngClass]="job.Job_Priority" id="card">

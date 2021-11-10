@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm-3 col-md-6 col-lg-6 col-xl-6" style="text-align: left;" >
                 <div *ngFor="let job of jobdata">
-                <h1 class="display-3">{{jobname | uppercase }}</h1>
+                <!-- <h1 class="display-3">{{jobname | uppercase }}</h1> -->
                 <p class="text-justify" [innerHTML]="job.Job_Description"></p>
                 <p [innerHTML]="job.Job_Prefered_Skill"></p>
             </div>
