@@ -17,6 +17,7 @@ import { JobnameaddComponent } from './jobnameadd/jobnameadd.component';
 import { JobnamelistComponent } from './jobnamelist/jobnamelist.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
+import { ResumedetailComponent } from './resumedetail/resumedetail.component';
 
 const routes: Routes = [{path:'',redirectTo:'landing',pathMatch:'full'},
 {path:'landing',component:LandingComponent},
@@ -36,7 +37,8 @@ children:[
   {path:'jobname',component:JobnameaddComponent},
   {path:'jobnamelist',component:JobnamelistComponent},
   {path:'joblist',component:JobdetailsComponent},
-  {path:'joblistadd',component:JobdetailsaddComponent}
+  {path:'joblistadd',component:JobdetailsaddComponent},
+  {path:'resumedetails', component:ResumedetailComponent}
 ]},
 
 ];

@@ -8,7 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ApplypositionComponent } from './applyposition/applyposition.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { ConsultingComponent } from './consulting/consulting.component';
 import { DevappsComponent } from './devapps/devapps.component';
@@ -38,6 +38,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ResumedetailComponent } from './resumedetail/resumedetail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,8 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     JobnameaddComponent,
     JobnamelistComponent,
     JobdetailsComponent,
-    JobdetailsaddComponent
+    JobdetailsaddComponent,
+    ResumedetailComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +85,7 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     ShareButtonsModule,
     ShareIconsModule   
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 }) 
 export class AppModule { }

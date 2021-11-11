@@ -44,8 +44,8 @@
             <div class="col-sm-4" *ngFor="let job of jobpostdata" id="carditem">
                 <a (click)="apply(job.Job_Title)">
                     <div class="card" [ngClass]="job.Job_Priority" id="card">
-                        <h1 class="font-weight-bold">{{job.Job_Title}}</h1>
-                        <p>{{job.Job_Location}}</p>
+                        <h1 class="font-weight-bold text-cente">{{job.Job_Title}}</h1>
+                        <p class="text-center">{{job.Job_Location}}</p>
                     </div>
                 </a>
             </div>

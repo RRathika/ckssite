@@ -16,7 +16,8 @@ export class ckssiteApiService {
   public jobEdit = new BehaviorSubject<any>('');
   public jobpost = new BehaviorSubject<any>('');
   savejobapplyperson(data: any): Observable<any> {
-    return this.httpclient.post('https://localhost:44348/api/JobDetail/saveUpdateJobDetails', data)
+    debugger
+    return this.httpclient.post('https://ckssolutions.co.in/Api/jobapply/job_create.php', data)
   }
   savecontactdetails(data: any): Observable<any> {
     return this.httpclient.post('https://ckssolutions.co.in/Api/contact/create.php', data)
@@ -62,5 +63,8 @@ export class ckssiteApiService {
   getbytype(Job_Type:any):Observable<any>{
     this.postbytype=JSON.stringify({Job_Type})
     return this.httpclient.post('https://ckssolutions.co.in/Api/jobpost/viewbytype.php',this.postbytype);
+  }
+  getjobapply():Observable<any>{
+    return this.httpclient.get('https://ckssolutions.co.in/Api/jobapply/view.php');
   }
 }

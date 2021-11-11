@@ -18,10 +18,10 @@ export class ApplypositionComponent implements OnInit {
   jobForm: FormGroup = this.formBuilder.group({
     Name: ['', Validators.required],
     Email: ['', [Validators.required, Validators.email]],
-    MobileNo: ['', [Validators.required, Validators.minLength(10)]],
-    JobName: ['', Validators.required],
-    Message: ['', [Validators.required]],
-    ResumeFile: ['', [Validators.required]]
+    Mobile: ['', [Validators.required, Validators.minLength(10)]],
+    Position: ['', Validators.required],
+    Coverletter : ['', [Validators.required]],
+    Resume: ['', [Validators.required]]
   });
   file: any;
   filterData: any[] = [];
@@ -33,7 +33,6 @@ export class ApplypositionComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.formBuilder);
     this.route.paramMap.subscribe(data => {
       this.name = data.get('name');
       this.jobname = this.name.replace("_", " ");
@@ -41,7 +40,6 @@ export class ApplypositionComponent implements OnInit {
       this.loadjobpost(this.jobname);
     });
     this.url = window.location.href;
-    console.log(this.url)
   }
   loadjobdetail(name: any) {
     console.log(name);    
@@ -57,34 +55,43 @@ export class ApplypositionComponent implements OnInit {
       this.jobdata1=data;
     })
   }
-  onSelectFile(event: any) {
+  onSelectFile(event: any) { 
+        
     this.file = event;
-    const reader = new FileReader();
-    reader.onload = () => {
+    // const reader = new FileReader();
+    // reader.onload = () => {
+    //   const img = new Image();
+    //   img.src = reader.result as string;
+    // }
+    // reader.onload = () => {
       // For Image Resolution
-      const img = new Image();
-      img.src = reader.result as string;
-      img.onload = () => {
-        const height = img.naturalHeight;
-        const width = img.naturalWidth;
+      // const img = new Image();
+      // img.src = reader.result as string;
+      // img.onload = () => {
+      //   const height = img.naturalHeight;
+      //   const width = img.naturalWidth;
 
-      }
+      // }
       // this.sliderList[index].sliderImageUrl = reader.result as string;
-    }
+    // }
 
-    reader.readAsDataURL(event.target.files[0]);
-    this.jobForm.value['ResumeFile'] = event.target.files[0];
+    // reader.readAsDataURL(event.target.files[0]);
+    
+    
+    this.jobForm.value['Resume'] = event.target.files[0];
+    console.log(event.target.files[0]);
+    
+    
   }
   assignFormData() {
     var formData: any = new FormData();
     formData.append('Id', this.id);
     formData.append('Name', this.jobForm.value['Name']);
     formData.append('Email', this.jobForm.value['Email']);
-    formData.append('MobileNo', this.jobForm.value['MobileNo']);
-    formData.append('JobName', this.jobForm.value['JobName']);
-    formData.append('Message', this.jobForm.value['Message']);
-    formData.append('ResumeFile', this.jobForm.value['ResumeFile']);
-
+    formData.append('Mobile', this.jobForm.value['Mobile']);
+    formData.append('Position ', this.jobForm.value['Position']);
+    formData.append('Coverletter', this.jobForm.value['Coverletter']);
+    formData.append('Resume', this.jobForm.value['Resume']);
     return formData;
   }
   onSubmit() {
@@ -96,8 +103,9 @@ export class ApplypositionComponent implements OnInit {
       this.loading = true;
       this._ApiService.savejobapplyperson(this.assignFormData())
         .subscribe(data => {
+          console.log(data);
+          
           if (data) {
-            console.log(data);
             this.router.navigate(['/landing']);
           }
         });

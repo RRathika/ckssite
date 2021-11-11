@@ -46,12 +46,12 @@
                         </div>
                         <div class="form-group">
                             <label for="phnumber">Phone no</label>
-                            <input type="Number" formControlName="MobileNo" class="form-control" id="phnumber"
+                            <input type="Number" formControlName="Mobile" class="form-control" id="phnumber"
                                 placeholder="Number">
                         </div>
                         <div class="form-group">
                             <label for="Select1">Applied position</label>
-                            <select formControlName="JobName" class="form-control dropdown-primary" id="Select1">
+                            <select formControlName="Position" class="form-control dropdown-primary" id="Select1">
                                 <option value="{{name}}" selected>{{jobname}}</option>
                                 <!-- <option value="BB">Back End Developer</option>
                         <option value="CC">Automation Testing</option>
@@ -61,11 +61,11 @@
                         </div>
                         <div class="form-group">
                             <label for="Textarea1">Cover letter</label>
-                            <textarea formControlName="Message" class="form-control" id="Textarea1" rows="3"></textarea>
+                            <textarea formControlName="Coverletter" class="form-control" id="Textarea1" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="File1">Upload CV/Resume </label>
-                            <input type="file" formControlName="ResumeFile" class="form-control-file" id="File1"
+                            <input type="file" formControlName="Resume" class="form-control-file" id="File1"
                                 (change)="onSelectFile($event)">
                         </div>
                         <div class="form-group form-check">
