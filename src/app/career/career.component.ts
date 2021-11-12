@@ -32,16 +32,13 @@ export class CareerComponent implements OnInit {
       this.jobpostdata = data;
     })
   }
-  apply(title: any) {
-    console.log(title);
+  apply(title: any) {   
     this.titleurl = title;
-    this.finalurl = this.titleurl.replace(' ', '_');
-    console.log(this.finalurl);
+    this.finalurl = this.titleurl.replace(' ', '_');    
     this.router.navigate(['/jobapply/' + this.finalurl])
   }
   onOptionsSelected(e: any) {
-    this.jobnameselect = e.target.value;
-    console.log(this.jobnameselect);    
+    this.jobnameselect = e.target.value;      
     if (this.jobnameselect == "Select All Job Name") {
       this._ApiService.getjobpost().subscribe(data => {
         this.jobpostdata = data;
@@ -54,8 +51,7 @@ export class CareerComponent implements OnInit {
     }
   }
   onOptionsjoblocation(e: any) {
-    this.jobtypeselect = e.target.value;
-    console.log(this.jobtypeselect);
+    this.jobtypeselect = e.target.value;    
     if (this.jobtypeselect == "Select All Job Type") {
       this._ApiService.getjobpost().subscribe(data => {
         this.jobpostdata = data;
@@ -69,7 +65,6 @@ export class CareerComponent implements OnInit {
   }
   onjobtypeSelected(e: any) {
     this.joblocationselect = e.target.value;
-    console.log(this.joblocationselect);
     if (this.joblocationselect == "Select All Job Location") {
       this._ApiService.getjobpost().subscribe(data => {
         this.jobpostdata = data;

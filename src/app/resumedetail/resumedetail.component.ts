@@ -17,7 +17,6 @@ export class ResumedetailComponent implements OnInit {
   }
   loaddata(){
     this._ApiService.getjobapply().subscribe(data=>{
-      console.log(data);
       this.jobdata=data;
     })
   }

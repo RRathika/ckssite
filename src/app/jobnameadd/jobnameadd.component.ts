@@ -25,11 +25,9 @@ export class JobnameaddComponent implements OnInit {
   ngOnInit(): void {
     this._ApiService.jobEdit.subscribe(response=>{
       this.result=response;
-      console.log(this.result)
       if(response){        
         //this.jobnameForm.patchValue(response);
         this.id=response.Job_Id;
-        console.log(this.id);
         this.jobnameForm.patchValue({
           Job_Title:this.result.Job_Title,
           Job_Description:this.result.Job_Description,
@@ -55,14 +53,12 @@ submit(){
     if(this.id)
     {
       this._ApiService.updatejobname(this.id,this.jobnameForm?.value).subscribe(data=>{
-        console.log(data);
         alert('Data updated successfully');
         this.router.navigateByUrl('/admin/jobnamelist');
       })
     }
     else{
     this._ApiService.savejobname(this.jobnameForm?.value).subscribe(data=>{
-      console.log(data);
       alert('Data saved successfully');
       this.jobnameForm.reset(); 
     })

@@ -21,7 +21,6 @@ jobdata?:any;
   }
   loadjobname(){
     this._ApiService.getjobname().subscribe(data=>{
-      console.log(data);
       this.jobdata=data;
     })
   }

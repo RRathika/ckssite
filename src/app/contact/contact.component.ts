@@ -34,7 +34,6 @@ export class ContactComponent implements OnInit {
     this.loading = true;
    this._ApiService.savecontactdetails(this.contactForm?.value)
       .subscribe(data => {
-        console.log(data.status);
         this.contactForm.reset();
         if(data.status)
         {

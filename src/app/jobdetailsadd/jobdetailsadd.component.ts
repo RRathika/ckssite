@@ -36,18 +36,12 @@ export class JobdetailsaddComponent implements OnInit {
       this.result=response;     
       if(response){        
         this.jobpostForm.patchValue(response);
-        let part=response.Job_StartDate.split('00:00:00');
-        console.log(part);
-        
+        let part=response.Job_StartDate.split('00:00:00');     
         let parts=part[0].split('-');
         this.patchstart={year:+parts[0],month:+parts[1],day:+parts[2]};
-        console.log(this.patchstart);        
-        let part1=response.Job_EndDate.split('00:00:00');
-        console.log(part1);
-        
+        let part1=response.Job_EndDate.split('00:00:00');        
         let parts1=part1[0].split('-');
         this.patchend={year:+parts1[0],month:+parts1[1],day:+parts1[2]};
-        console.log(this.patchend); 
         this.id=response.Id;
         this.jobpostForm.patchValue({
           Job_StartDate:this.patchstart,
@@ -59,7 +53,6 @@ export class JobdetailsaddComponent implements OnInit {
   }
   loadjobname():void{
     this._ApiService.getjobname().subscribe(data=>{
-      console.log(data);
       this.jobdata=data;
     })
   }
@@ -67,8 +60,6 @@ export class JobdetailsaddComponent implements OnInit {
 
   }
   submit(){
-    //alert(this.jobpostForm.value);
-    //console.log(this.jobpostForm.value['Job_StartDate']);
    
     if(this.id)
     {
@@ -79,7 +70,6 @@ export class JobdetailsaddComponent implements OnInit {
       this.jobpostForm.value['Job_EndDate']=this.jobenddate?this.jobenddate.year+"-"+('0'+this.jobenddate.month).slice(-2)
       +"-"+('0'+this.jobenddate.day).slice(-2):null;
       this._ApiService.updatejobpost(this.jobpostForm?.value).subscribe(data=>{
-        console.log(data);
         alert('Data updated successfully');
         this.router.navigateByUrl('/admin/joblist');
       })

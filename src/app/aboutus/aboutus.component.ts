@@ -30,6 +30,10 @@ export class AboutusComponent implements OnInit {
       "thumbImage": "../../assets/images/clients/lagoon.png"
     },
     {
+      "image": "../../assets/images/clients/fairum.png",
+      "thumbImage": "../../assets/images/clients/fairum.png"
+    },
+    {
       "image": "../../assets/images/clients/lelab.png",
       "thumbImage": "../../assets/images/clients/lelab.png"
     },

@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="col"></div>
-    <div class="col">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
         <div style="padding:20% 0;">
             <h1 class="mt-5 text-center display-3">Login Page</h1>
             <form class="mt-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -15,7 +15,7 @@
                         formControlName="password">
                 </div>
                 <div class="col text-center mt-3">
-                    <button type="submit" class="btn btn-lg btn-dark ">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-light ">Submit</button>
                 </div>
             </form>
             <div *ngIf="successalert" class="alert alert-{{response}} alert-dismissible mt-3">

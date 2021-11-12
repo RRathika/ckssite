@@ -54,14 +54,15 @@
             <img src="../../assets/images/idea2.jpg" class="img-fluid" alt="Responsive image">
         </div>
         <div class="col-sm-6">
-            <form class="text-center border border-light p-5 shadow mb-5 bg-white rounded">
-                <p class="h1 mb-4">Share Your Idea</p>
-                <input type="text" class="form-control mb-4" placeholder="Name">
-                <input type="email" class="form-control mb-4" placeholder="E-mail">
-                <textarea class="form-control" style="height:150px"></textarea>
-                <button class="btn btn-block my-4"
+            <form [formGroup]="ideashareForm" class="text-center border border-light p-5 shadow mb-5 bg-white rounded"(ngSubmit)="onSubmit()">
+                <h2 class="h1 mb-4">Share Your Idea</h2>
+                <input type="text" formControlName="Name" class="form-control mb-4" placeholder="Name">
+                <input type="email" formControlName="Email" class="form-control mb-4" placeholder="E-mail">
+                <textarea formControlName="YourMessage" class="form-control" style="height:150px"></textarea>
+                <input class="btn btn-block my-4"
                     style="font-size: 20px;color: #fff;background-color: #a85a96;border-color: #a85a96;"
-                    type="submit">Submit</button>
+                    type="submit" value="SEND"/>
+                    <p *ngIf="message" style="font-size: 20px;font-weight: bold;" class="text-success">{{message}}</p>
             </form>
         </div>
     </div>

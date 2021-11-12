@@ -12,7 +12,6 @@ export class SidemenuComponent {
   currentRoute!: string;
 
   constructor(private router: Router) {
-    //console.log(router.url);
     this.currentRoute = router.url;
     if (this.currentRoute == '/consulting') {
       this.backgroundtop = "#79a85a";

@@ -11,7 +11,6 @@ export class FooterComponent {
   currentRoute!: string;
 
   constructor(private router: Router) {
-    //console.log(router.url);
     this.currentRoute = router.url;
     if (this.currentRoute == '/consulting') {
       this.dynamiccolor = "#79a85a";

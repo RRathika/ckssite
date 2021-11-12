@@ -20,9 +20,7 @@ export class JobdetailsComponent implements OnInit {
     this.router.navigateByUrl('/admin/joblistadd');
   }
   ondeletejobpost(id:any,item:any){
-    console.log(id);
-    console.log(item);
-    
+   
     this._ApiService.deletejobpost(id).subscribe(data=>{
       alert('Deleted Successfully');
       this.dataload();
@@ -30,10 +28,7 @@ export class JobdetailsComponent implements OnInit {
   }
   dataload(){
     this._ApiService.getjobpost().subscribe(data=>{
-      //console.log(data['data'].length);
-      this.jobdata=data;
-      console.log(this.jobdata);      
-     // this._ApiService.getjobname()
+      this.jobdata=data;  
     })
   }
 
