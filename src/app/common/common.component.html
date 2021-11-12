@@ -5,17 +5,17 @@
         </div>
         <ul class="list-unstyled components">
             <li class="active">
-                <a href="/admin/dashboard">Home</a>
+                <a routerLink="/admin/dashboard">Home</a>
             </li>
             <li>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Job
                     Details</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a href="/admin/joblist">List of Job details</a>
+                        <a routerLink="/admin/joblist">List of Job details</a>
                     </li>
                     <li>
-                        <a href="/admin/joblistadd">Add Job details</a>
+                        <a routerLink="/admin/joblistadd">Add Job details</a>
                     </li>
                 </ul>
             </li>
@@ -23,15 +23,15 @@
                 <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Job Name</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu1">
                     <li>
-                        <a href="/admin/jobnamelist">List of job name</a>
+                        <a routerLink="/admin/jobnamelist">List of job name</a>
                     </li>
                     <li>
-                        <a href="/admin/jobname">Add Job Name</a>
+                        <a routerLink="/admin/jobname">Add Job Name</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="/admin/resumedetails">Resume Details</a>                    
+                <a routerLink="/admin/resumedetails">Resume Details</a>                    
             </li>
             <li>
                 <a (click)="logout()">LogOut</a>
