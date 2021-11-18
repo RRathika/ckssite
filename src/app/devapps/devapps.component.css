@@ -39,6 +39,12 @@ h1{
       p{     
        font-size: 40px;
       }
+      #headmobile{
+        display: block;
+    }
+    #headdesk{
+        display: none;
+    }
 }
 @media only screen and (max-width:600px) {
     font{
@@ -46,6 +52,12 @@ h1{
     }
     h1{
         font-size: 45px !important;
+    }
+    #headmobile{
+        display: none!important;
+    }
+    #headdesk{
+        display: block!important;
     }
 }
 .banner {
@@ -101,4 +113,9 @@ b{
   .carousel-control.right {
     background-image: linear-gradient(to right,rgb(0 0 0 / 0%) 0,rgb(0 0 0 / 0%) 100%);
   }
-  
+  #headmobile{
+    display: block;
+}
+#headdesk{
+    display: none;
+}

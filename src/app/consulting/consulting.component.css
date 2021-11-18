@@ -38,6 +38,12 @@ body{
     .imageslider{
         width: 100% !important;
       }
+      #headmobile{
+        display: block;
+    }
+    #headdesk{
+        display: none;
+    }
 }
  @media only screen and (max-width:600px) {
     font{         
@@ -49,6 +55,12 @@ body{
        .imageslider{
         width: 100% !important;
       }
+      #headmobile{
+        display: none!important;
+    }
+    #headdesk{
+        display: block!important;
+    }
 }
 .item
 {
@@ -75,4 +87,9 @@ b{
   .carousel-control-prev-icon {
     background-color: black;
   }
-  
+  #headmobile{
+    display: block;
+}
+#headdesk{
+    display: none;
+}
