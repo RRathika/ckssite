@@ -14,8 +14,9 @@ export class CareerComponent implements OnInit {
   titleurl: any;
   finalurl: any;
   jobnameselect: any;
-  jobtypeselect:any;
-  joblocationselect:any;
+  jobtypeselect: any;
+  joblocationselect: any;
+  Response: any;
   constructor(private _ApiService: ckssiteApiService, private router: Router) { }
   ngOnInit(): void {
     this.loadjobname();
@@ -25,45 +26,57 @@ export class CareerComponent implements OnInit {
   loadjobname() {
     this._ApiService.getjobname().subscribe(data => {
       this.jobdata = data;
+      this.Response = data.message;
     })
   }
   loadjobpost() {
     this._ApiService.getjobpost().subscribe(data => {
       this.jobpostdata = data;
+      this.Response = data.message;
+
     })
   }
-  apply(title: any) {   
+  apply(title: any) {
     this.titleurl = title;
-    this.finalurl = this.titleurl.replace(' ', '_');    
+    this.finalurl = this.titleurl.replace(' ', '_');
     this.router.navigate(['/jobapply/' + this.finalurl])
   }
   onOptionsSelected(e: any) {
-    this.jobnameselect = e.target.value;      
+    this.jobnameselect = e.target.value;
     if (this.jobnameselect == "Select All Job Name") {
       this._ApiService.getjobpost().subscribe(data => {
-        this.jobpostdata = data;
+        if (data) {
+          this.jobpostdata = data;
+        }
       })
     }
     else {
       this._ApiService.getbynamejobdetail(this.jobnameselect).subscribe(data => {
-        this.jobpostdata = data;
+
+        if (data) {
+          this.jobpostdata = data;
+        }
+        this.Response = data.message;
       })
     }
+
   }
-  onOptionsjoblocation(e: any) {
-    this.jobtypeselect = e.target.value;    
+  onjobtypeSelected(e: any) {
+    this.jobtypeselect = e.target.value;
     if (this.jobtypeselect == "Select All Job Type") {
       this._ApiService.getjobpost().subscribe(data => {
         this.jobpostdata = data;
       })
     }
     else {
-      this._ApiService.getbylocation(this.jobtypeselect).subscribe(data => {
+      this._ApiService.getbytype(this.jobtypeselect).subscribe(data => {
         this.jobpostdata = data;
+        this.Response = data.message;
+        console.log(data.message);        
       })
     }
   }
-  onjobtypeSelected(e: any) {
+  onOptionsjoblocation(e: any) {
     this.joblocationselect = e.target.value;
     if (this.joblocationselect == "Select All Job Location") {
       this._ApiService.getjobpost().subscribe(data => {
@@ -71,8 +84,10 @@ export class CareerComponent implements OnInit {
       })
     }
     else {
-      this._ApiService.getbytype(this.joblocationselect).subscribe(data => {
+      this._ApiService.getbylocation(this.joblocationselect).subscribe(data => {
         this.jobpostdata = data;
+        this.Response = data.message;
+        console.log(data.message);
       })
     }
   }
