@@ -61,6 +61,26 @@ export class ItserviceComponent implements OnInit {
   Image:'../../assets/images/itservice/timber.jpg',
   thumbImage: '../../assets/images/itservice/timber.jpg',
   title:'Timber Management System'
+},
+{
+  Image:'../../assets/images/itservice/indiancoin.jpg',
+  thumbImage: '../../assets/images/itservice/indiancoin.jpg',
+  title:'Indian Coin'
+},
+{
+  Image:'../../assets/images/itservice/fcfleet.jpg',
+  thumbImage: '../../assets/images/itservice/fcfleet.jpg',
+  title:'FC fleet'
+},
+{
+  Image:'../../assets/images/itservice/ayyablog.jpg',
+  thumbImage: '../../assets/images/itservice/ayyablog.jpg',
+  title:'Ayya blog'
+},
+{
+  Image:'../../assets/images/itservice/hindusamayam.jpg',
+  thumbImage: '../../assets/images/itservice/hindusamayam.jpg',
+  title:'Hindu Samayam'
 }];
 
 }
