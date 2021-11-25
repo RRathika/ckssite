@@ -23,8 +23,8 @@ export class ItserviceComponent implements OnInit {
     thumbImage: '../../assets/images/itservice/allied.png',
     title: 'Allied Enterprises'
 }, {
-    image: '../../assets/images/itservice/goldncart.png',
-    thumbImage: '../../assets/images/itservice/goldncart.png',
+    image: '../../assets/images/itservice/goldncart.jpg',
+    thumbImage: '../../assets/images/itservice/goldncart.jpg',
     title: 'Gold n cart handcrafted Jewels'
 }, {
     image: '../../assets/images/itservice/platez.png',
@@ -38,6 +38,29 @@ export class ItserviceComponent implements OnInit {
     image: '../../assets/images/itservice/vpr.png',
     thumbImage: '../../assets/images/itservice/vpr.png',
     title:'VPR Construction'
+},{
+  Image:'../../assets/images/itservice/career.png',
+  thumbImage: '../../assets/images/itservice/career.png',
+  title:'Career In'
+},
+{
+  Image:'../../assets/images/itservice/dotnet.jpg',
+  thumbImage: '../../assets/images/itservice/dotnet.jpg',
+  title:'Billing Management System'
+},{
+  Image:'../../assets/images/itservice/hms.jpg',
+  thumbImage: '../../assets/images/itservice/hms.jpg',
+  title:'Hospital Management System'
+},
+{
+  Image:'../../assets/images/itservice/petrol.jpg',
+  thumbImage: '../../assets/images/itservice/petrol.jpg',
+  title:'Petrol Bulk Management System'
+},
+{
+  Image:'../../assets/images/itservice/timber.jpg',
+  thumbImage: '../../assets/images/itservice/timber.jpg',
+  title:'Timber Management System'
 }];
 
 }

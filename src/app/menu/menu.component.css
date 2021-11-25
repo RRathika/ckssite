@@ -3,8 +3,8 @@
       position: fixed;
       bottom: 0px !important;
       height: 0px;
-      margin: 0 28% 0 28%;
-      padding: 0px 15% 0 15%;
+      margin: 0 31% 0 31%;
+      padding: 0px 1% 0 1%;
       border-radius: 15px 15px 0 0;
       background-color: #000;
    }
@@ -14,7 +14,7 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 10px 16px;
+    padding: 10px 11px;
     text-decoration: none;
     font-size: 25px;
    }
@@ -33,10 +33,10 @@ a.closebtn {
           position: fixed;
           bottom: 0px !important;
           height: 0px;
-          margin: 0 28% 0 28%;
-          padding: 0px 3% 0 3%;
+          margin: 0 30% 0 30%;
           border-radius: 15px 15px 0 0;
           background-color: #000;
+          width: 40%;
        }
        
     .navbar a {
